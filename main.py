@@ -13,4 +13,8 @@ app.router.add_static('/static/', path='static')
 
 app.router.add_get('/', index)
 
-web.run_app(app, host='0.0.0.0')
+# web.run_app(app, host='http://109.120.191.176:8080/')
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app, host='0.0.0.0', port=8000)
