@@ -13,4 +13,4 @@ app.router.add_static('/static/', path='static')
 
 app.router.add_get('/', index)
 
-web.run_app(app)
+web.run_app(app, host='0.0.0.0')
