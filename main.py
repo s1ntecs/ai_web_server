@@ -5,6 +5,10 @@ import jinja2
 async def index(request):
     return aiohttp_jinja2.render_template('charakters.html', request, {})
 
+async def echo(request):
+    data = await request.json()
+    return web.json_response(data)
+
 app = web.Application()
 aiohttp_jinja2.setup(app, loader=jinja2.FileSystemLoader('templates'))
 
@@ -12,8 +16,7 @@ aiohttp_jinja2.setup(app, loader=jinja2.FileSystemLoader('templates'))
 app.router.add_static('/static/', path='static')
 
 app.router.add_get('/', index)
-
-# web.run_app(app, host='http://109.120.191.176:8080/')
+app.router.add_post('/hi', echo)  # Добавьте новый маршрут для эхо-ответа на /hi
 
 if __name__ == '__main__':
     import uvicorn
