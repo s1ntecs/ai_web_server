@@ -2,9 +2,10 @@
 <html>
 <head>
    <meta charset="UTF-8">
+   <title>Telegram Web App Interaction</title>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Test Telegram WebApps API</title>
+   <link rel="stylesheet" href="/static/styles.css">
    <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
 
    <style>
@@ -45,11 +46,10 @@
 <body>
    <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
    </div>
-   <p>Just text</p> <!--Просто текст для проверки-->
-   <a class="link" href="https://mihailgok.ru">Link</a> <!--Просто ссылка для проверки-->
-   <p class="hint">Some little hint</p> <!--Просто текст-подсказка для проверки-->
-   <button id="btn" class="button">Show/Hide Main Button</button> <!--Кнопка, чтобы скрыть / показать основную кнопку-->
-   <button id="btnED" class="button">Enable/Disable Main Button</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
+   <img id="image1" src="/static/img/AE.png" onclick="handleImageClick('image1')" />
+   <button id="button1" class="button">Albert Einshtein</button> <!--Кнопка, чтобы скрыть / показать основную кнопку-->
+   <img id="image2" src="/static/img/SM.png" onclick="handleImageClick('image2')" />
+   <button id="button2" class="button">Super Mario</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
 </body>
 
 <script>
@@ -63,7 +63,7 @@
    tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
    tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
 
-   let btn = document.getElementById("btn"); //получаем кнопку скрыть/показать 
+   let btn = document.getElementById("button1"); //получаем кнопку скрыть/показать 
 
    btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
       if (tg.MainButton.isVisible){ //если кнопка показана 
@@ -74,15 +74,13 @@
       }
    });
 
-   let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать
+   let btnED = document.getElementById("button2"); //получаем кнопку активировать/деактивировать
    btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-      if (tg.MainButton.isActive){ //если кнопка показана 
-         tg.MainButton.setParams({"color": "#E0FFFF"}); //меняем цвет
-         tg.MainButton.disable() //скрываем кнопку 
+      if (tg.MainButton.isVisible){ //если кнопка показана 
+         tg.MainButton.hide() //скрываем кнопку 
       }
       else{ //иначе
-         tg.MainButton.setParams({"color": "#143F6B"}); //меняем цвет
-         tg.MainButton.enable() //показываем 
+         tg.MainButton.show() //показываем 
       }
    });
 
