@@ -6,6 +6,17 @@ body {
     /* overflow: hidden; */
 }
 
+@media only screen and (max-width: 1028px) {
+    /* Стили для устройств с максимальной шириной экрана до 480 пикселей */
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
 h1 {
     position: absolute;
     top: 800px;
