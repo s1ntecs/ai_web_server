@@ -1,100 +1,109 @@
 body {
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    background: #F5F5F5 0% 0% no-repeat padding-box;
-    opacity: 1;
-    display: grid;
-    place-items: center;
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    background: #F5F5F5;
+    /* overflow: hidden; */
 }
 
-#image1 {
-    top: 1024px;
-    left: 344px;
-    width: 392px;
-    height: 392px;
-    /* background: transparent url('img/SM.png') 0% 0% no-repeat padding-box; */
-    box-shadow: 0px 15px 15px #00000029;
-    border: 3px solid #27A7E7;
-    border-radius: 50px;
+h1 {
+    position: absolute;
+    top: 800px;
+    left: 353px;
+    width: 130px;
+    height: 48px;
+    text-align: left;
+    font: normal normal bold 40px/48px 'SF Pro', sans-serif;
+    letter-spacing: 0px;
+    color: #27A7E7;
+    opacity: 1;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+h2 {
+    position: absolute;
+    top: 848px;
+    left: 395px;
+    width: 184px;
+    height: 48px;
+    text-align: left;
+    font: normal normal 300 40px/48px 'SF Pro', sans-serif;
+    letter-spacing: 0px;
+    color: #27A7E7;
+    opacity: 1;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+h3 {
+    position: absolute;
+    top: 1441px;
+    left: 475px;
+    width: 374px;
+    height: 48px;
+    text-align: left;
+    font: normal normal bold 40px/48px 'SF Pro', sans-serif;
+    letter-spacing: 0px;
+    color: #27A7E7;
+    opacity: 1;
+}
+
+h4 {
+    position: absolute;
+    top: 1489px;
+    left: 448px;
+    width: 290px;
+    height: 48px;
+    text-align: left;
+    font: normal normal 300 40px/48px 'SF Pro', sans-serif;
+    letter-spacing: 0px;
+    color: #27A7E7;
     opacity: 1;
 }
 
 #button1 {
-    top: 1441px;
-    left: 353px;
-    width: 374px;
-    height: 48px;
-    text-align: center;
-    font: normal normal bold 40px/48px SF Pro;
-    letter-spacing: 0px;
-    background-color: transparent;
-    color: #27A7E7;
-    opacity: 1;
-    border: none;
-}
-
-
-#label1 {
-    top: 848px;
-    left: 448px;
-    width: 184px;
-    height: 48px;
-    text-align: center;
-    font: normal normal 300 40px/48px SF Pro;
-    letter-spacing: 0px;
-    color: #27A7E7;
-    opacity: 1;
-}
-
-#image2 {
+    position: absolute;
     top: 383px;
     left: 344px;
     width: 392px;
     height: 392px;
-    /* background: transparent url('img/AE.png') 0% 0% no-repeat padding-box; */
-    box-shadow: 0px 15px 15px #00000029;
+    text-align: center;
+    letter-spacing: 0px;
+    background: transparent url('img/albert.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+    color: #27A7E7;
+    opacity: 1;
     border: 3px solid #27A7E7;
     border-radius: 50px;
-    opacity: 1;
 }
-
 
 #button2 {
-    top: 800px;
-    left: 475px;
-    width: 130px;
-    height: 48px;
+    position: absolute;
+    top: 1024px;
+    left: 344px;
+    width: 392px;
+    height: 392px;
     text-align: center;
-    font: normal normal bold 40px/48px SF Pro;
     letter-spacing: 0px;
-    background-color: transparent;
+    background: transparent url('img/mario.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
     color: #27A7E7;
     opacity: 1;
-    border: none;
+    border: 3px solid #27A7E7;
+    border-radius: 50px;
 }
 
-#label2 {
-    top: 1489px;
-    left: 395px;
-    width: 290px;
-    height: 48px;
-    text-align: center;
-    font: normal normal 300 40px/48px SF Pro;
-    letter-spacing: 0px;
-    color: #27A7E7;
-    opacity: 1;
-}
-body{
+
+/* body{
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 18px;
- }
-
+ } */
+/* 
  .hint{
     color: var(--tg-theme-hint-color);
  }
@@ -116,4 +125,4 @@ body{
 
  #usercard{
     text-align: center;
- }
+ } */
