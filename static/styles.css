@@ -6,17 +6,6 @@ body {
     /* overflow: hidden; */
 }
 
-@media only screen and (max-width: 1028px) {
-    /* Стили для устройств с максимальной шириной экрана до 480 пикселей */
-    body {
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-  }
-
 h1 {
     position: absolute;
     top: 800px;
@@ -106,34 +95,188 @@ h4 {
 }
 
 
-/* body{
-    color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px;
- } */
-/* 
- .hint{
-    color: var(--tg-theme-hint-color);
- }
+@media only screen and (max-width: 699) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          }
+          
+          /* Дополнительные стили для оформления */
+          #button1 {
+            text-align: center;
+            letter-spacing: 0px;
+            background-size: cover;
+            opacity: 1;
+            border: 5px solid #27A7E7;
+            border-radius: 10vw;
+            width: 50vh;
+            height: 50vh;
+            margin-left: -70px; 
+          }
+          
+          #button2 {
+            text-align: center;
+            letter-spacing: 0px;
+            background-size: cover;
+            opacity: 1;
+            border: 5px solid #27A7E7;
+            border-radius: 10vw;
+            width: 50vh;
+            height: 50vh;
+            margin-left: -70px; 
+          }
+          
+          h1, h3 {
+            font: normal normal bold 5vh/5vh 'SF Pro', sans-serif;
+            margin-left: -70px;
+            font-weight: bolder;
+          }
+    
+          h2, h4 {
+            font: normal normal 300 5vh/5vh 'SF Pro', sans-serif;
+            margin-left: -70px;
+          }
+          h3, h4 {
+            margin-left: -80px;
+          }
+          
+          h1, h2, h3, h4 {
+            margin-top: -40px;
+          }
+          #button1,
+          h1,
+          h2,
+          #button2,
+          h3,
+          h4 {
+            display: flex;
+          }
+}
+@media only screen and (min-width: 700px) and (max-width: 850px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+              }
+              
+              /* Дополнительные стили для оформления */
+              #button1 {
+                text-align: center;
+                letter-spacing: 0px;
+                background-size: cover;
+                opacity: 1;
+                border: 6px solid #27A7E7;
+                border-radius: 15vw;
+                width: 50vh;
+                height: 50vh;
+                margin-left: -70px; 
+              }
+              
+              #button2 {
+                text-align: center;
+                letter-spacing: 0px;
+                background-size: cover;
+                opacity: 1;
+                border: 5px solid #27A7E7;
+                border-radius: 10vw;
+                width: 50vh;
+                height: 50vh;
+                margin-left: -70px; 
+              }
+              
+              h1, h3 {
+                font: normal normal bold 5vh/5vh 'SF Pro', sans-serif;
+                margin-left: -40px;
+                font-weight: bolder;
+              }
+        
+              h2, h4 {
+                font: normal normal 300 5vh/5vh 'SF Pro', sans-serif;
+                margin-left: -70px;
+              }
+              h3, h4 {
+                margin-left: -80px;
+              }
+              
+              h1, h2, h3, h4 {
+                margin-top: -40px;
+              }
+              #button1,
+              h1,
+              h2,
+              #button2,
+              h3,
+              h4 {
+                display: flex;
+              }
+              
+            }
+    
+@media only screen and (device-height: 896px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      /* Дополнительные стили для оформления */
+      #button1 {
+        text-align: center;
+        letter-spacing: 0px;
+        background-size: cover;
+        opacity: 1;
+        border: 5px solid #27A7E7;
+        border-radius: 10vw;
+        width: 40vh;
+        height: 40vh;
+        /* margin-left: -20px;  */
+      }
+      
+      #button2 {
+        text-align: center;
+        letter-spacing: 0px;
+        background-size: cover;
+        opacity: 1;
+        border: 5px solid #27A7E7;
+        border-radius: 10vw;
+        width: 40vh;
+        height: 40vh;
+        margin-bottom: 500px;
+        /* margin-left: -20px;  */
+      }
+      
+      
+      h1, h2, h3, h4 {
+        margin: 5px 0;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1, h3 {
+        font: normal normal bold 4vh/4vh 'SF Pro', sans-serif;
+        /* margin-left: -20px; */
+        font-weight: bolder;
 
- .link{
-    color: var(--tg-theme-link-color);
- }
+      }
 
- .button{
-    background: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
-    border: none;
-    font-size: 18px;
- }
-
- .button:not(:last-child){
-    margin-bottom: 20px
- }
-
- #usercard{
-    text-align: center;
- } */
+      h2, h4 {
+        font: normal normal 300 4vh/4vh 'SF Pro', sans-serif;
+        /* margin-left: -20px; */
+      }
+      
+      #button1,
+      h1,
+      h2,
+      #button2,
+      h3,
+      h4 {
+        display: flex;
+      }
+      
+    }

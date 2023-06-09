@@ -35,25 +35,27 @@
 
    let btn = document.getElementById("button1"); //получаем кнопку скрыть/показать 
 
-   btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-      if (tg.MainButton.isVisible){ //если кнопка показана 
-         tg.MainButton.hide() //скрываем кнопку 
-      }
-      else{ //иначе
-         tg.MainButton.show() //показываем
-      }
-      char_id = "1";
+   btn.addEventListener('click', function(){
+      tg.sendData("1");
+      // if (tg.MainButton.isVisible){ //если кнопка показана 
+      //    tg.MainButton.hide() //скрываем кнопку 
+      // }
+      // else{ //иначе
+      //    tg.MainButton.show() //показываем
+      // }
+      // char_id = "1";
    });
 
    let btnED = document.getElementById("button2"); //получаем кнопку активировать/деактивировать
-   btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-      if (tg.MainButton.isVisible){ //если кнопка показана 
-         tg.MainButton.hide() //скрываем кнопку 
-      }
-      else{ //иначе
-         tg.MainButton.show() //показываем 
-      }
-      char_id = "2";
+   btnED.addEventListener('click', function(){
+      tg.sendData("1");
+      // if (tg.MainButton.isVisible){ //если кнопка показана 
+      //    tg.MainButton.hide() //скрываем кнопку 
+      // }
+      // else{ //иначе
+      //    tg.MainButton.show() //показываем 
+      // }
+      // char_id = "2";
    });
 
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
