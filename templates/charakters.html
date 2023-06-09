@@ -29,6 +29,7 @@
    tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
    tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
    tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
+   let char_id = "1";
 
    let btn = document.getElementById("button1"); //получаем кнопку скрыть/показать 
 
@@ -37,8 +38,9 @@
          tg.MainButton.hide() //скрываем кнопку 
       }
       else{ //иначе
-         tg.MainButton.show() //показываем 
+         tg.MainButton.show() //показываем
       }
+      char_id = "1";
    });
 
    let btnED = document.getElementById("button2"); //получаем кнопку активировать/деактивировать
@@ -49,10 +51,11 @@
       else{ //иначе
          tg.MainButton.show() //показываем 
       }
+      char_id = "2";
    });
 
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
-      tg.sendData("some string that we need to send"); 
+      tg.sendData(char_id);
    });
 
 
