@@ -6,96 +6,89 @@ body {
     /* overflow: hidden; */
 }
 
-h1 {
-    position: absolute;
-    top: 800px;
-    left: 353px;
-    width: 130px;
-    height: 48px;
-    text-align: left;
-    font: normal normal bold 40px/48px 'SF Pro', sans-serif;
-    letter-spacing: 0px;
-    color: #27A7E7;
-    opacity: 1;
-    font-weight: bold;
-    white-space: nowrap;
-}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
-h2 {
-    position: absolute;
-    top: 848px;
-    left: 395px;
-    width: 184px;
-    height: 48px;
-    text-align: left;
-    font: normal normal 300 40px/48px 'SF Pro', sans-serif;
-    letter-spacing: 0px;
-    color: #27A7E7;
-    opacity: 1;
-    font-weight: lighter;
-    white-space: nowrap;
-}
+    h1 {
+        font: normal normal bold 2.6vh/2.6vh 'SF Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #27A7E7;
+        opacity: 1;
+        font-weight: bold;
+    }
 
-h3 {
-    position: absolute;
-    top: 1441px;
-    left: 475px;
-    width: 374px;
-    height: 48px;
-    text-align: left;
-    font: normal normal bold 40px/48px 'SF Pro', sans-serif;
-    letter-spacing: 0px;
-    color: #27A7E7;
-    opacity: 1;
-}
+    h2 {
+        font: normal normal 300 2.6vh/2.6vh 'SF Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #27A7E7;
+        opacity: 1;
+        font-weight: lighter;
+    }
 
-h4 {
-    position: absolute;
-    top: 1489px;
-    left: 448px;
-    width: 290px;
-    height: 48px;
-    text-align: left;
-    font: normal normal 300 40px/48px 'SF Pro', sans-serif;
-    letter-spacing: 0px;
-    color: #27A7E7;
-    opacity: 1;
-}
+    h3 {
+        font: normal normal bold 2.6vh/2.6vh 'SF Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #27A7E7;
+    }
 
-#button1 {
-    position: absolute;
-    top: 383px;
-    left: 344px;
-    width: 392px;
-    height: 392px;
-    text-align: center;
-    letter-spacing: 0px;
-    background: transparent url('img/albert.png') 0% 0% no-repeat padding-box;
-    background-size: cover;
-    color: #27A7E7;
-    opacity: 1;
-    border: 3px solid #27A7E7;
-    border-radius: 50px;
-}
+    h4 {
+        text-align: left;
+        font: normal normal 300 2.6vh/2.6vh 'SF Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #27A7E7;
+    }
+    #button1 {
+        text-align: center;
+        letter-spacing: 0px;
+        background-size: cover;
+        opacity: 1;
+        border: 5px solid #27A7E7;
+        border-radius: 3vw;
+        width: 25vh;
+        height: 25vh;
+        justify-content: center;
+        letter-spacing: 0px;
+        background: transparent url('img/albert.png') 0% 0% no-repeat padding-box;
+        background-size: cover;
+        color: #27A7E7;
+        opacity: 1;
+        margin-top: 80vh;
+    }
 
-#button2 {
-    position: absolute;
-    top: 1024px;
-    left: 344px;
-    width: 392px;
-    height: 392px;
-    text-align: center;
-    letter-spacing: 0px;
-    background: transparent url('img/mario.png') 0% 0% no-repeat padding-box;
-    background-size: cover;
-    color: #27A7E7;
-    opacity: 1;
-    border: 3px solid #27A7E7;
-    border-radius: 50px;
-}
+    #button2 {
+        text-align: center;
+        letter-spacing: 0px;
+        background-size: cover;
+        opacity: 1;
+        border: 5px solid #27A7E7;
+        border-radius: 3vw;
+        width: 25vh;
+        height: 25vh;
+        text-align: center;
+        letter-spacing: 0px;
+        background: transparent url('img/mario.png') 0% 0% no-repeat padding-box;
+        background-size: cover;
+        color: #27A7E7;
+        opacity: 1;
+        /* margin-top: 20vh; */
+    }
+        #button1,
+        h1,
+        h2,
+        #button2,
+        h3,
+        h4 {
+          display: flex;
+          margin-left: 40vh;
+        }
+    
 
-
-@media only screen and (max-height: 690px) {
+@media only screen and (max-height: 1750px) {
     .container {
         display: flex;
         flex-direction: column;
@@ -106,72 +99,61 @@ h4 {
       
       /* Дополнительные стили для оформления */
       #button1 {
-        text-align: center;
-        letter-spacing: 0px;
-        background-size: cover;
-        opacity: 1;
-        border: 5px solid #27A7E7;
         border-radius: 10vw;
-        width: 25vh;
-        height: 25vh;
-        margin-left: -50px; 
+        margin-left: 0vh;
+        margin-top: 20vh;
       }
       
       #button2 {
-        text-align: center;
-        letter-spacing: 0px;
-        background-size: cover;
-        opacity: 1;
         border: 5px solid #27A7E7;
         border-radius: 10vw;
-        width: 25vh;
-        height: 25vh;
-        margin-left: -50px;
-        margin-top: 30;
+        margin-left: 0px;
+        margin-top: 0;
       }
       
       h1, h3 {
         font: normal normal bold 2.5vh/2.5vh 'SF Pro', sans-serif;
-        margin-left: -50px;
+        margin-left: 0px;
         font-weight: bolder;
       }
 
       h2, h4 {
         font: normal normal 300 2.5vh/2.5vh 'SF Pro', sans-serif;
-        margin-left: -50px;
+        margin-left: 0px;
       }
       #button2 {
-        margin-top: 250px;
+        margin-top: 0px;
       }
-      h1 {
-        margin-top: 150px;
-      }
-      h2 {
-        margin-top: 170px;
-        margin-left: -30px;
-      }
-      h3 {
-        margin-top: 400px;
-        margin-left: 0px;
-
-      }
-      h4 {
-        margin-top: 410px;
-        margin-left: -10px;
-
-      }
+     
       #button1,
-      h1,
-      h2,
-      #button2,
-      h3,
-      h4 {
-        display: flex;
-      }
-      
+        h1,
+        h2,
+        #button2,
+        h3,
+        h4 {
+          display: flex;
+          margin-left: 19vh;
+        }
+        h1 {
+            margin-left: 19.5vh;
+        }
+        h2 {
+          margin-left: 22vh;
+          margin-top: -1vh;
+        }
+        h3 {
+          margin-left: 27vh;
+  
+        }
+        h4 {
+          margin-left: 25vh;
+          margin-top: -2vh;
+        }
     }
 
-@media only screen and (min-height: 699px) and (max-height: 850px) {
+
+    
+@media only screen and (min-height: 1699px) and (max-height: 850px) {
     .container {
         display: flex;
         flex-direction: column;
@@ -254,80 +236,68 @@ h4 {
 (device-height: 926px), (device-height: 896px),
 (device-height: 844px)
   {
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-          }
-          
-          /* Дополнительные стили для оформления */
-          #button1 {
-            text-align: center;
-            letter-spacing: 0px;
-            background-size: cover;
-            opacity: 1;
-            border: 5px solid #27A7E7;
-            border-radius: 10vw;
-            width: 25vh;
-            height: 25vh;
-            margin-left: -50px; 
-          }
-          
-          #button2 {
-            text-align: center;
-            letter-spacing: 0px;
-            background-size: cover;
-            opacity: 1;
-            border: 5px solid #27A7E7;
-            border-radius: 10vw;
-            width: 25vh;
-            height: 25vh;
-            margin-left: -50px;
-            margin-top: 50;
-          }
-          
-          h1, h3 {
-            font: normal normal bold 2.5vh/2.5vh 'SF Pro', sans-serif;
-            margin-left: -50px;
-            font-weight: bolder;
-          }
-    
-          h2, h4 {
-            font: normal normal 300 2.5vh/2.5vh 'SF Pro', sans-serif;
-            margin-left: -50px;
-          }
-          #button2 {
-            margin-top: 250px;
-          }
-          h1 {
-            margin-top: 150px;
-          }
-          h2 {
-            margin-top: 170px;
-            margin-left: -30px;
-          }
-          h3 {
-            margin-top: 400px;
-            margin-left: 0px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      /* Дополнительные стили для оформления */
+      #button1 {
+        border-radius: 10vw;
+        margin-left: 0vh;
+        margin-top: 20vh;
+      }
+      
+      #button2 {
+        border: 5px solid #27A7E7;
+        border-radius: 10vw;
+        margin-left: 0px;
+        margin-top: 0;
+      }
+      
+      h1, h3 {
+        font: normal normal bold 2.5vh/2.5vh 'SF Pro', sans-serif;
+        margin-left: 0px;
+        font-weight: bolder;
+      }
 
-          }
-          h4 {
-            margin-top: 410px;
-            margin-left: -10px;
-
-          }
-          #button1,
-          h1,
-          h2,
-          #button2,
-          h3,
-          h4 {
-            display: flex;
-          }
-          
+      h2, h4 {
+        font: normal normal 300 2.5vh/2.5vh 'SF Pro', sans-serif;
+        margin-left: 0px;
+      }
+      #button2 {
+        margin-top: 0px;
+      }
+     
+      #button1,
+        h1,
+        h2,
+        #button2,
+        h3,
+        h4 {
+          display: flex;
+          margin-left: 13vh;
         }
+        h1 {
+            margin-left: 13.5vh;
+            margin-top: 2.8vh;
+        }
+        h2 {
+          margin-left: 17vh;
+          margin-top: -1vh;
+        }
+        h3 {
+          margin-left: 21vh;
+  
+        }
+        h4 {
+          margin-left: 19vh;
+          margin-top: -2vh;
+        }
+    }
 
 @media only screen and (device-height: 814px) {
             .container {
