@@ -7,8 +7,8 @@ import json
 
 
 async def index(request):
-    headers = request.headers
-    query = request.request.query_string
+    headers = str(request.headers)
+    query = request.query_string
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
     c.execute("INSERT INTO request (headers, query) VALUES (?, ?)", (headers, query))
