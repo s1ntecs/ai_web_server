@@ -282,15 +282,11 @@ h2 {
   }
 
   #first-button {
-      /* background-color: white; */
       background-size: cover;
-      /* color: #27A7E7; */
     }
 
     #second-button {
-      /* background-color: #27A7E7; */
       background-size: cover;
-      /* color: white; */
       width: 20vh;
       height: 7vh;
     }
