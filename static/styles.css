@@ -1,377 +1,297 @@
+/* Общие стили */
 body {
-    position: relative;
-    width: 1080px;
-    height: 1920px;
-    background: #F5F5F5;
-    /* overflow: hidden; */
+  padding: 20px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Стили для кнопок */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: 5px solid #27A7E7;
+  border-radius: 50px;
+  width: 20vh;
+  height: 20vh;
+  letter-spacing: 0px;
+  background-size: cover;
+  color: #27A7E7;
+  /* margin-left: 30.3%; */
+}
+
+.col-md-6{
+  margin-top: 10vh;
+}
+
+
+  .btn-container {
+      position: fixed;
+      left: 50%;
+      top: 90%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      /* margin-left: 20%;
+      margin-right: 20%; */
+    }
+    
+.fixed-button {
+  border: 5px solid #27A7E7;
+  border-radius: 35px;
+  width: 30vh;
+  height: 10vh;
+  font: normal normal bold 3vh/3vh 'SF Pro', sans-serif;
+  font-weight: bold;
   }
 
+  #first-button {
+      background-color: white;
+      background-size: cover;
+      color: #27A7E7;
+    }
+
+    #second-button {
+      background-color: #27A7E7;
+      background-size: cover;
+      color: white;
+    }
+
+
     h1 {
-        font: normal normal bold 2.6vh/2.6vh 'SF Pro', sans-serif;
-        letter-spacing: 0px;
-        color: #27A7E7;
-        opacity: 1;
-        font-weight: bold;
+      margin-top:-100px;
+      font: normal normal bold 2.6vh/2.6vh 'SF Pro', sans-serif;
+      letter-spacing: 0px;
+      color: #27A7E7;
+      opacity: 1;
+      font-weight: bold;
+  }
+
+  h2 {
+      font: normal normal 300 2.6vh/2.6vh 'SF Pro', sans-serif;
+      letter-spacing: 0px;
+      color: #27A7E7;
+      opacity: 1;
+      font-weight: lighter;
+  }
+
+#button1 {
+  background: transparent url('img/albert-einstein.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button2 {
+  background: transparent url('img/eminem.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button3 {
+  background: transparent url('img/harry-potter.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button4 {
+  background: transparent url('img/mario.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button5 {
+  background: transparent url('img/mr-bean.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button6 {
+  background: transparent url('img/phsycologist.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button7 {
+  background: transparent url('img/snoop-dogg.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button8 {
+  background: transparent url('img/steve-jobs.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button9 {
+  background: transparent url('img/elon-musk.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button10 {
+  background: transparent url('img/gigachad.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button11 {
+  background: transparent url('img/Kenny-McCormick.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button12 {
+  background: transparent url('img/mj.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button13 {
+  background: transparent url('img/nerd.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button14 {
+  background: transparent url('img/stalin.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button15 {
+  background: transparent url('img/tony-stark.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+
+#button16 {
+  background: transparent url('img/SM.png');
+  background-size: cover;
+  color: #27A7E7;
+}
+/* Адаптивные стили */
+@media only screen and (max-device-height: 670px) {
+  .col-md-6{
+      margin-top: 7vh;
+    }
+  .btn {
+  border: 10px solid #27A7E7;
+  border-radius: 8vw;
+  width: 17vh;
+  height: 17vh;
+  letter-spacing: 0px;
+  background-size: cover;
+  color: #27A7E7;
+}
+h1 {
+  margin-top:-130px;
+  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  letter-spacing: 0px;
+  color: #27A7E7;
+  opacity: 1;
+  font-weight: bold;
+}
+
+h2 {
+  font: normal normal 300 2vh/2vh 'SF Pro', sans-serif;
+  letter-spacing: 0px;
+  color: #27A7E7;
+  opacity: 1;
+  font-weight: lighter;
+}
+.btn-container {
+  gap: 100px;
+  /* margin-left: 20%;
+  margin-right: 20%; */
+}
+.fixed-button {
+  border: 5px solid #27A7E7;
+  border-radius: 35px;
+  width: 20vh;
+  height: 7vh;
+  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font-weight: bold;
+  }
+
+  #first-button {
+      background-color: white;
+      background-size: cover;
+      color: #27A7E7;
     }
 
-    h2 {
-        font: normal normal 300 2.6vh/2.6vh 'SF Pro', sans-serif;
-        letter-spacing: 0px;
-        color: #27A7E7;
-        opacity: 1;
-        font-weight: lighter;
+    #second-button {
+      background-color: #27A7E7;
+      background-size: cover;
+      color: white;
+      width: 25vh;
+      height: 7vh;
     }
-
-    h3 {
-        font: normal normal bold 2.6vh/2.6vh 'SF Pro', sans-serif;
-        letter-spacing: 0px;
-        color: #27A7E7;
-    }
-
-    h4 {
-        text-align: left;
-        font: normal normal 300 2.6vh/2.6vh 'SF Pro', sans-serif;
-        letter-spacing: 0px;
-        color: #27A7E7;
-    }
-    #button1 {
-        text-align: center;
-        letter-spacing: 0px;
-        background-size: cover;
-        opacity: 1;
-        border: 5px solid #27A7E7;
-        border-radius: 3vw;
-        width: 25vh;
-        height: 25vh;
-        justify-content: center;
-        letter-spacing: 0px;
-        background: transparent url('img/albert.png') 0% 0% no-repeat padding-box;
-        background-size: cover;
-        color: #27A7E7;
-        opacity: 1;
-        margin-top: 80vh;
-    }
-
-    #button2 {
-        text-align: center;
-        letter-spacing: 0px;
-        background-size: cover;
-        opacity: 1;
-        border: 5px solid #27A7E7;
-        border-radius: 3vw;
-        width: 25vh;
-        height: 25vh;
-        text-align: center;
-        letter-spacing: 0px;
-        background: transparent url('img/mario.png') 0% 0% no-repeat padding-box;
-        background-size: cover;
-        color: #27A7E7;
-        opacity: 1;
-        /* margin-top: 20vh; */
-    }
-        #button1,
-        h1,
-        h2,
-        #button2,
-        h3,
-        h4 {
-          display: flex;
-          margin-left: 40vh;
-        }
-    
-
-@media only screen and (max-height: 1750px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      
-      /* Дополнительные стили для оформления */
-      #button1 {
-        border-radius: 10vw;
-        margin-left: 0vh;
-        margin-top: 20vh;
-      }
-      
-      #button2 {
-        border: 5px solid #27A7E7;
-        border-radius: 10vw;
-        margin-left: 0px;
-        margin-top: 0;
-      }
-      
-      h1, h3 {
-        font: normal normal bold 2.5vh/2.5vh 'SF Pro', sans-serif;
-        margin-left: 0px;
-        font-weight: bolder;
-      }
-
-      h2, h4 {
-        font: normal normal 300 2.5vh/2.5vh 'SF Pro', sans-serif;
-        margin-left: 0px;
-      }
-      #button2 {
-        margin-top: 0px;
-      }
-     
-      #button1,
-        h1,
-        h2,
-        #button2,
-        h3,
-        h4 {
-          display: flex;
-          margin-left: 19vh;
-        }
-        h1 {
-            margin-left: 19.5vh;
-        }
-        h2 {
-          margin-left: 22vh;
-          margin-top: -1vh;
-        }
-        h3 {
-          margin-left: 27vh;
-  
-        }
-        h4 {
-          margin-left: 25vh;
-          margin-top: -2vh;
-        }
-    }
-
-
-    
-@media only screen and (min-height: 1699px) and (max-height: 850px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      
-      /* Дополнительные стили для оформления */
-      #button1 {
-        text-align: center;
-        letter-spacing: 0px;
-        background-size: cover;
-        opacity: 1;
-        border: 5px solid #27A7E7;
-        border-radius: 10vw;
-        width: 45vh;
-        height: 45vh;
-        margin-left: -50px; 
-      }
-      
-      #button2 {
-        text-align: center;
-        letter-spacing: 0px;
-        background-size: cover;
-        opacity: 1;
-        border: 5px solid #27A7E7;
-        border-radius: 10vw;
-        width: 25vh;
-        height: 25vh;
-        margin-left: -50px;
-        margin-top: 50;
-      }
-      
-      h1, h3 {
-        font: normal normal bold 2.5vh/2.5vh 'SF Pro', sans-serif;
-        margin-left: -50px;
-        font-weight: bolder;
-      }
-
-      h2, h4 {
-        font: normal normal 300 2.5vh/2.5vh 'SF Pro', sans-serif;
-        margin-left: -50px;
-      }
-      #button2 {
-        margin-top: 250px;
-      }
-      h1 {
-        margin-top: 150px;
-      }
-      h2 {
-        margin-top: 170px;
-        margin-left: -30px;
-      }
-      h3 {
-        margin-top: 400px;
-        margin-left: 0px;
-
-      }
-      h4 {
-        margin-top: 410px;
-        margin-left: -10px;
-
-      }
-      #button1,
-      h1,
-      h2,
-      #button2,
-      h3,
-      h4 {
-        display: flex;
-      }
-      
-    }
-
-
-@media only screen and (device-height: 896px),
+}
+@media screen and
+(device-height: 896px),
 (device-height: 844px), (device-height: 851px),
 (device-height: 932px), (device-height: 852px),
 (device-height: 926px), (device-height: 896px),
 (device-height: 844px)
-  {
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      
-      /* Дополнительные стили для оформления */
-      #button1 {
-        border-radius: 10vw;
-        margin-left: 0vh;
-        margin-top: 20vh;
-      }
-      
-      #button2 {
-        border: 5px solid #27A7E7;
-        border-radius: 10vw;
-        margin-left: 0px;
-        margin-top: 0;
-      }
-      
-      h1, h3 {
-        font: normal normal bold 2.5vh/2.5vh 'SF Pro', sans-serif;
-        margin-left: 0px;
-        font-weight: bolder;
-      }
+{
+  .col-md-6{
+      margin-top: 7vh;
+    }
+  .btn {
+  border: 10px solid #27A7E7;
+  border-radius: 8vw;
+  width: 15vh;
+  height: 15vh;
+  letter-spacing: 0px;
+  background-size: cover;
+  color: #27A7E7;
+}
+h1 {
+  margin-top:-130px;
+  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  letter-spacing: 0px;
+  color: #27A7E7;
+  opacity: 1;
+  font-weight: bold;
+}
 
-      h2, h4 {
-        font: normal normal 300 2.5vh/2.5vh 'SF Pro', sans-serif;
-        margin-left: 0px;
-      }
-      #button2 {
-        margin-top: 0px;
-      }
-     
-      #button1,
-        h1,
-        h2,
-        #button2,
-        h3,
-        h4 {
-          display: flex;
-          margin-left: 13vh;
-        }
-        h1 {
-            margin-left: 13.5vh;
-            margin-top: 2.8vh;
-        }
-        h2 {
-          margin-left: 17vh;
-          margin-top: -1vh;
-        }
-        h3 {
-          margin-left: 21vh;
-  
-        }
-        h4 {
-          margin-left: 19vh;
-          margin-top: -2vh;
-        }
+h2 {
+  font: normal normal 300 2vh/2vh 'SF Pro', sans-serif;
+  letter-spacing: 0px;
+  color: #27A7E7;
+  opacity: 1;
+  font-weight: lighter;
+}
+.btn-container {
+  gap: 100px;
+  /* margin-left: 20%;
+  margin-right: 20%; */
+}
+.fixed-button {
+  border: 5px solid #27A7E7;
+  border-radius: 35px;
+  width: 16vh;
+  height: 7vh;
+  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font-weight: bold;
+  }
+
+  #first-button {
+      background-color: white;
+      background-size: cover;
+      color: #27A7E7;
     }
 
-@media only screen and (device-height: 814px) {
-            .container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-              }
-              
-              /* Дополнительные стили для оформления */
-              #button1 {
-                text-align: center;
-                letter-spacing: 0px;
-                background-size: cover;
-                opacity: 1;
-                border: 5px solid #27A7E7;
-                border-radius: 10vw;
-                width: 25vh;
-                height: 25vh;
-                margin-left: -50px; 
-              }
-              
-              #button2 {
-                text-align: center;
-                letter-spacing: 0px;
-                background-size: cover;
-                opacity: 1;
-                border: 5px solid #27A7E7;
-                border-radius: 10vw;
-                width: 25vh;
-                height: 25vh;
-                margin-left: -50px;
-                margin-top: 50;
-              }
-              
-              h1, h3 {
-                font: normal normal bold 2.5vh/2.5vh 'SF Pro', sans-serif;
-                margin-left: -50px;
-                font-weight: bolder;
-              }
-        
-              h2, h4 {
-                font: normal normal 300 2.5vh/2.5vh 'SF Pro', sans-serif;
-                margin-left: -50px;
-              }
-              #button2 {
-                margin-top: 250px;
-              }
-              h1 {
-                margin-top: 150px;
-              }
-              h2 {
-                margin-top: 170px;
-                margin-left: -30px;
-              }
-              h3 {
-                margin-top: 400px;
-                margin-left: 0px;
-        
-              }
-              h4 {
-                margin-top: 410px;
-                margin-left: -10px;
-        
-              }
-              #button1,
-              h1,
-              h2,
-              #button2,
-              h3,
-              h4 {
-                display: flex;
-              }
-              
-            }
-        
+    #second-button {
+      background-color: #27A7E7;
+      background-size: cover;
+      color: white;
+      width: 20vh;
+      height: 7vh;
+    }
+}

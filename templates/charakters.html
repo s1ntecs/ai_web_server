@@ -1,86 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="UTF-8">
-   <title>Telegram Web App Interaction</title>
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-   <link rel="stylesheet" href="/static/styles.css">
-   <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
-
+  <title>Мой сайт с кнопками</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/styles.css">
 </head>
-
 <body>
-   <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
-   </div>
-   <button id="button1" class="button"></button>
-   <h1>Альберт Эйнштейн</h1>
-   <h2>Физик-теоретик</h2>
-   <button id="button2" class="button"></button>
-   <h3>Марио</h3>
-   <h4>Персонаж</h4>
+  <div class="container">
+    <div class="row">
+      <!-- Создание 17 кнопок -->
+      <div class="col-md-6 ">
+        <button id="button1" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button2" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Альберт Эйнштейн</h1>
+        <h2>Физик-теоретик</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Эминем</h1>
+        <h2>Музыкант</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button3" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button4" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Гарри Поттер</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Супер Марио</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button5" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button6" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Мистер Бин</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Персонаж</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button7" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button8" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Снуп-Дог</h1>
+        <h2>Музыкант</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Стив Джобс</h1>
+        <h2>Предприниматель</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button9" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button10" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Илон Маск</h1>
+        <h2>Предприниматель</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Гигачад</h1>
+        <h2>интернет-мем</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button11" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button12" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Кенни Маккорми</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Майкл Джексон</h1>
+        <h2>Музыкант</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button13" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button14" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Задрот</h1>
+        <h2>Всезнающий</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Иосиф Сталин</h1>
+        <h2>Государственный деятель</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button15" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Тони Старк</h1>
+        <h2>Персонаж</h2>
+      </div>
+    </div>
+  </div>
+  <div class="btn-container">
+    <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block">Избранные</button>
+    <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block">Боты сообщества</button>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
-<script>
-   let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-
-   tg.expand(); //расширяем на все окно  
-
-   tg.MainButton.text = "Выбрать"; //изменяем текст кнопки 
-   tg.MainButton.setText("Выбрать"); //изменяем текст кнопки иначе
-   tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
-   tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
-   tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
-   let char_id = "1";
-
-   let btn = document.getElementById("button1"); //получаем кнопку скрыть/показать 
-
-   btn.addEventListener('click', function(){
-      tg.sendData("1");
-      // if (tg.MainButton.isVisible){ //если кнопка показана 
-      //    tg.MainButton.hide() //скрываем кнопку 
-      // }
-      // else{ //иначе
-      //    tg.MainButton.show() //показываем
-      // }
-      // char_id = "1";
-   });
-
-   let btnED = document.getElementById("button2"); //получаем кнопку активировать/деактивировать
-   btnED.addEventListener('click', function(){
-      tg.sendData("2");
-      // if (tg.MainButton.isVisible){ //если кнопка показана 
-      //    tg.MainButton.hide() //скрываем кнопку 
-      // }
-      // else{ //иначе
-      //    tg.MainButton.show() //показываем 
-      // }
-      // char_id = "2";
-   });
-
-   Telegram.WebApp.onEvent('mainButtonClicked', function(){
-      tg.sendData(char_id);
-   });
-
-
-   let usercard = document.getElementById("usercard"); //получаем блок usercard 
-
-   let profName = document.createElement('p'); //создаем параграф
-   profName.innerText = `${tg.initDataUnsafe.user.first_name}
-   ${tg.initDataUnsafe.user.last_name}
-   ${tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;
-   //выдем имя, "фамилию", через тире username и код языка
-   usercard.appendChild(profName); //добавляем 
-
-   let userid = document.createElement('p'); //создаем еще параграф 
-   userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
-   usercard.appendChild(userid); //добавляем
-
-
-   //работает только в attachment menu
-   // let pic = document.createElement('img'); //создаем img
-   // pic.src = tg.initDataUnsafe.user.photo_url; //задаём src 
-   // usercard.appendChild(pic); //добавляем элемент в карточку 
-</script>
 </html>
