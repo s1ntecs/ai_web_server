@@ -18,7 +18,7 @@ body {
   height: 20vh;
   letter-spacing: 0px;
   background-size: cover;
-  color: #27A7E7;
+  /* color: #27A7E7; */
   /* margin-left: 30.3%; */
 }
 
@@ -50,15 +50,15 @@ body {
   }
 
   #first-button {
-      background-color: white;
+      /* background-color: white; */
       background-size: cover;
-      color: #27A7E7;
+      /* color: #27A7E7; */
     }
 
     #second-button {
-      background-color: #27A7E7;
+      /* background-color: #27A7E7; */
       background-size: cover;
-      color: white;
+      /* color: white; */
     }
 
 
@@ -186,13 +186,13 @@ body {
   height: 17vh;
   letter-spacing: 0px;
   background-size: cover;
-  color: #27A7E7;
+  /* color: #27A7E7; */
 }
 h1 {
   margin-top:-100px;
   font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   letter-spacing: 0px;
-  color: #27A7E7;
+  /* color: #27A7E7; */
   opacity: 1;
   font-weight: bold;
 }
@@ -200,7 +200,7 @@ h1 {
 h2 {
   font: normal normal 300 2vh/2vh 'SF Pro', sans-serif;
   letter-spacing: 0px;
-  color: #27A7E7;
+  /* color: #27A7E7; */
   opacity: 1;
   font-weight: lighter;
 }
@@ -221,13 +221,13 @@ h2 {
   #first-button {
       background-color: white;
       background-size: cover;
-      color: #27A7E7;
+      /* color: #27A7E7; */
     }
 
     #second-button {
       background-color: #27A7E7;
       background-size: cover;
-      color: white;
+      /* color: white; */
       width: 25vh;
       height: 7vh;
     }
@@ -249,13 +249,13 @@ h2 {
   height: 15vh;
   letter-spacing: 0px;
   background-size: cover;
-  color: #27A7E7;
+  /* color: #27A7E7; */
 }
 h1 {
   margin-top:-100px;
   font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   letter-spacing: 0px;
-  color: #27A7E7;
+  /* color: #27A7E7; */
   opacity: 1;
   font-weight: bold;
 }
@@ -263,7 +263,7 @@ h1 {
 h2 {
   font: normal normal 300 2vh/2vh 'SF Pro', sans-serif;
   letter-spacing: 0px;
-  color: #27A7E7;
+  /* color: #27A7E7; */
   opacity: 1;
   font-weight: lighter;
 }
@@ -282,15 +282,15 @@ h2 {
   }
 
   #first-button {
-      background-color: white;
+      /* background-color: white; */
       background-size: cover;
-      color: #27A7E7;
+      /* color: #27A7E7; */
     }
 
     #second-button {
       background-color: #27A7E7;
       background-size: cover;
-      color: white;
+      /* color: white; */
       width: 20vh;
       height: 7vh;
     }
