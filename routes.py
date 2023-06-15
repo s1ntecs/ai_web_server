@@ -70,6 +70,6 @@ app.router.add_static('/static/', path='static')
 app.router.add_get('/', index)
 app.router.add_get('/favorites', favorites)
 app.router.add_post('/new_char', add_character)
-app.router.add_post('/get_data', get_data)
+app.router.add_get('/get_data', get_data)
 
 web.run_app(app, host='0.0.0.0')
