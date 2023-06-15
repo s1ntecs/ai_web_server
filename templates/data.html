@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Избранные персонажи</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/favorites.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      {% for headers, query in values %}
+      <div class="col-md-6 text-center">
+      <!-- </div>
+      <div class="col-md-6 text-center"> -->
+        <h1>{{ headers }}</h1>
+        <h2>{{ query }}</h2>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Избранные персонажи</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/favorites.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      {% for name, username, char_id in values %}
+      <div class="col-md-6 text-center">
+        <button id="button{{ loop.index }}" class="btn btn-primary btn-block mb-3 mx-auto d-block">{{ name }}</button>
+      <!-- </div>
+      <div class="col-md-6 text-center"> -->
+        <!-- <h1>{{ name }}</h1> -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="btn-container">
+    <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block">Избранные</button>
+    <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block">Боты сообщества</button>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
