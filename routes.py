@@ -7,26 +7,26 @@ import json
 
 
 async def index(request):
-    headers = str(request.headers)
-    query = request.query_string
-    conn = sqlite3.connect('database.db')
-    c = conn.cursor()
-    c.execute("INSERT INTO request (headers, query) VALUES (?, ?)", (headers, query))
-    conn.commit()
+    # headers = str(request)
+    # query = str(request.query)
+    # conn = sqlite3.connect('database.db')
+    # c = conn.cursor()
+    # c.execute("INSERT INTO request (headers, query) VALUES (?, ?)", (headers, query))
+    # conn.commit()
 
     # Закрытие соединения с базой данных
-    conn.close()
+    # conn.close()
     return aiohttp_jinja2.render_template('charakters.html', request, {})
 
 
-async def get_data(request):
-    conn = sqlite3.connect('database.db')
-    c = conn.cursor()
-    c.execute("SELECT headers, query FROM request")
-    rows = c.fetchall()
-    headers, query = zip(*rows)
-    return aiohttp_jinja2.render_template('data.html', request,
-                                          {'values': zip(headers, query)})
+# async def get_data(request):
+#     conn = sqlite3.connect('database.db')
+#     c = conn.cursor()
+#     c.execute("SELECT headers, query FROM request")
+#     rows = c.fetchall()
+#     headers, query = zip(*rows)
+#     return aiohttp_jinja2.render_template('data.html', request,
+#                                           {'values': zip(headers, query)})
 
 
 async def favorites(request):
@@ -72,6 +72,6 @@ app.router.add_static('/static/', path='static')
 app.router.add_get('/', index)
 app.router.add_get('/favorites', favorites)
 app.router.add_post('/new_char', add_character)
-app.router.add_get('/get_data', get_data)
+# app.router.add_get('/get_data', get_data)
 
 web.run_app(app, host='0.0.0.0')
