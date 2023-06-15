@@ -12,7 +12,10 @@ async def index(request):
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
     c.execute("INSERT INTO request (headers, query) VALUES (?, ?)", (headers, query))
+    conn.commit()
 
+    # Закрытие соединения с базой данных
+    conn.close()
     return aiohttp_jinja2.render_template('charakters.html', request, {})
 
 
