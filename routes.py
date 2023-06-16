@@ -1,4 +1,6 @@
 from aiohttp import web
+import urllib.parse
+
 import aiohttp_jinja2
 import jinja2
 import sqlite3
@@ -30,19 +32,30 @@ async def index(request):
 
 
 async def favorites(request):
+    user_id = urllib.parse.parse_qs(request.query_string).get('value', [None])[0]
     # Создание базы данных и подключение к ней
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
+    int_usr = int(user_id)
     # Получение данных из таблицы characters
+    if user_id == "undefined":
+        int_usr = 2
+    c.execute("SELECT char_name, username, char_id FROM characters WHERE user_id = ?", (int_usr,))
+    pers_chars = c.fetchall()
+    pers_char_names, pers_usernames, pers_char_ids = zip(*pers_chars)
+
     c.execute("SELECT char_name, username, char_id FROM characters")
-    rows = c.fetchall()
-    char_names, usernames, char_ids = zip(*rows)
-    print(rows)
+    all_chars = c.fetchall()
+    char_names, usernames, char_ids = zip(*all_chars)
     # Закрытие соединения с базой данных
     conn.close()
+    return aiohttp_jinja2.render_template('favorites.html', request=request,
+                                      context={'values': zip(char_names, usernames, char_ids),
+                                               'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
 
-    return aiohttp_jinja2.render_template('favorites.html', request,
-                                          {'values': zip(char_names, usernames, char_ids)})
+    # return aiohttp_jinja2.render_template('favorites.html', request,
+    #                                       {'values': zip(char_names, usernames, char_ids)},
+    #                                       {'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
 
 
 async def add_character(request):
@@ -50,12 +63,13 @@ async def add_character(request):
     name = data.get('name')
     username = data.get('username')
     char_id = data.get('char_id')
+    user_id = data.get('user_id')
     # Создание базы данных и подключение к ней
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
 
     # Вставка новой записи в таблицу
-    c.execute("INSERT INTO characters (char_name, username, char_id) VALUES (?, ?, ?)", (name, username, char_id))
+    c.execute("INSERT INTO characters (char_name, username, user_id, char_id) VALUES (?, ?, ?, ?)", (name, username, user_id, char_id))
     conn.commit()
 
     # Закрытие соединения с базой данных

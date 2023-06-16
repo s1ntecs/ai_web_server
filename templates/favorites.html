@@ -10,12 +10,21 @@
 <body>
   <div class="container">
     <div class="row">
-      {% for name, username, char_id in values %}
+      {% for name, username, char_id in personal_values %}
       <div class="col-md-6 text-center">
         <button id="button{{ loop.index }}" class="btn btn-primary btn-block mb-3 mx-auto d-block">{{ name }}</button>
       <!-- </div>
       <div class="col-md-6 text-center"> -->
         <!-- <h1>{{ name }}</h1> -->
+      </div>
+      {% endfor %}
+      <h1> Боты Пользователей </h1>
+      {% for name, username, char_id in values %}
+      <div class="col-md-6 text-center">
+        <button id="button{{ loop.index }}" class="btn btn-primary btn-block mb-3 mx-auto d-block">{{ name }}</button>
+      <!-- </div>
+      <div class="col-md-6 text-center"> -->
+        <h1>{{ username }}</h1>
       </div>
       {% endfor %}
     </div>

@@ -38,7 +38,7 @@
     }
     .btn:active, .fixed-button:active {
       background: var(--tg-theme-bg-color) !important;
-      color: var(--tg-theme-bg-color) !important;
+      color: var(--tg-theme-button-text-color) !important;
       background-color: var(--tg-theme-bg-color) !important;
     }
     .btn-primary:hover {
@@ -164,8 +164,18 @@
   </div>
   <div class="btn-container">
     <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block">Избранные</button>
-    <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block">Боты сообщества</button>
-  </div>
+    <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
+
+    <script>
+      let userId;
+      let tg = window.Telegram.WebApp;
+      userId = tg.initDataUnsafe.user.id;
+      function redirectToFavorites(value) {
+        var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
+        window.location.href = url;
+      }
+    </script>
+      </div>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
