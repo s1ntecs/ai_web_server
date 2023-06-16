@@ -70,11 +70,11 @@
         <button id="button{{ loop.index }}" class="btn btn-primary rounded-pill  btn-block mb-3 mx-auto d-block">{{ name }}</button>
       </div>
     </div>
-    <hr> <!-- Горизонтальная линия -->
 
 
 
       {% endfor %}
+      <hr> <!-- Горизонтальная линия -->
       <h3>Боты других пользователей</h3 > <!-- Текст "Боты других пользователей" -->
       <div class="row">
       {% for name, username, char_id in values %}
