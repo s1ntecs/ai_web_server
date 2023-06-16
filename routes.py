@@ -74,6 +74,20 @@ async def add_character(request):
 
     return web.Response(text='Character added successfully')
 
+
+async def delete_characters_table(request):
+    # Подключение к базе данных
+    conn = sqlite3.connect('database.db')
+    c = conn.cursor()
+
+    # Удаление таблицы "characters"
+    c.execute("DROP TABLE IF EXISTS characters")
+
+    # Сохранение изменений и закрытие соединения с базой данных
+    conn.commit()
+    conn.close()
+
+
 app = web.Application()
 aiohttp_jinja2.setup(app, loader=jinja2.FileSystemLoader('templates'))
 
@@ -83,6 +97,6 @@ app.router.add_static('/static/', path='static')
 app.router.add_get('/', index)
 app.router.add_get('/favorites', favorites)
 app.router.add_post('/new_char', add_character)
-# app.router.add_get('/get_data', get_data)
+app.router.add_get('/del_bd', delete_characters_table)
 
 web.run_app(app, host='0.0.0.0')
