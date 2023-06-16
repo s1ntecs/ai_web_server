@@ -9,8 +9,8 @@ body {
 .button-container {
   display: flex;
   /* flex-wrap: wrap; */
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 }
 
 .row {
@@ -39,7 +39,6 @@ body {
   height: 12vh;
   letter-spacing: 0px;
   background-size: cover;
-  /* color: #27A7E7; */
   margin-left: 20.3%;
 }
 .new-btn {
@@ -68,9 +67,9 @@ body {
 .fixed-button {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
-  width: 30vh;
+  width: 25vh;
   height: 10vh;
-  font: normal normal bold 3vh/3vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
 
