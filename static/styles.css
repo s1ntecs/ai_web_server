@@ -12,7 +12,7 @@ body {
 }
 
 .btn {
-  border: 5px solid #27A7E7;
+  /* border: 5px solid #27A7E7; */
   border-radius: 50px;
   width: 20vh;
   height: 20vh;
@@ -41,7 +41,7 @@ body {
     }
     
 .fixed-button {
-  border: 5px solid #27A7E7;
+  /* border: 5px solid #27A7E7; */
   border-radius: 35px;
   width: 30vh;
   height: 10vh;
@@ -66,7 +66,7 @@ body {
       margin-top:-100px;
       font: normal normal bold 2.6vh/2.6vh 'SF Pro', sans-serif;
       letter-spacing: 0px;
-      color: #27A7E7;
+      /* color: #27A7E7; */
       opacity: 1;
       font-weight: bold;
   }
@@ -74,7 +74,7 @@ body {
   h2 {
       font: normal normal 300 2.6vh/2.6vh 'SF Pro', sans-serif;
       letter-spacing: 0px;
-      color: #27A7E7;
+      /* color: #27A7E7; */
       opacity: 1;
       font-weight: lighter;
   }
@@ -180,7 +180,7 @@ body {
       margin-top: 7vh;
     }
   .btn {
-  border: 10px solid #27A7E7;
+  /* border: 10px solid #27A7E7; */
   border-radius: 8vw;
   width: 17vh;
   height: 17vh;
@@ -210,7 +210,7 @@ h2 {
   margin-right: 20%; */
 }
 .fixed-button {
-  border: 5px solid #27A7E7;
+  /* border: 5px solid #27A7E7; */
   border-radius: 35px;
   width: 20vh;
   height: 7vh;
@@ -243,7 +243,7 @@ h2 {
       margin-top: 7vh;
     }
   .btn {
-  border: 10px solid #27A7E7;
+  /* border: 10px solid #27A7E7; */
   border-radius: 8vw;
   width: 15vh;
   height: 15vh;
@@ -273,7 +273,7 @@ h2 {
   margin-right: 20%; */
 }
 .fixed-button {
-  border: 5px solid #27A7E7;
+  /* border: 5px solid #27A7E7; */
   border-radius: 35px;
   width: 16vh;
   height: 7vh;
