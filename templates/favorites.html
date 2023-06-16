@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Избранные персонажи</title>
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/favorites.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
@@ -61,19 +63,23 @@
 </head>
 <body>
   <div class="container">
+    <div class="centered-row">
+
     <hr> <!-- Горизонтальная линия -->
     <h3>Твои боты</h3> <!-- Текст "Твои боты" -->
     <button id="add-char-btn" class="btn btn-secondary mb-3 mx-auto d-block"> Создать нового</button>
+  </div>
     <div class="row">
       {% for name, username, char_id in personal_values %}
       <div class="col-md-6 text-center">
         <button id="button{{ loop.index }}" class="btn btn-primary rounded-pill  btn-block mb-3 mx-auto d-block">{{ name }}</button>
       </div>
-    </div>
+
 
 
 
       {% endfor %}
+    </div>
       <hr> <!-- Горизонтальная линия -->
       <h3>Боты других пользователей</h3 > <!-- Текст "Боты других пользователей" -->
       <div class="row">

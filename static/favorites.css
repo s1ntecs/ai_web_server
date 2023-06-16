@@ -2,24 +2,32 @@
 body {
   padding: 20px;
 }
-
+    .centered-row {
+        text-align: center;
+    }
 /* Стили для кнопок */
 .button-container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
 }
 
+.row {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: left;
+  align-items: left;
+}
 .btn {
   font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
   font-weight: bold;
-  width: 20vh;
+  width: 18vh;
   height: 7vh;
   letter-spacing: 0px;
   background-size: cover;
   /* color: #27A7E7; */
-  margin-left: 30.3%;
+  margin-left: 20.3%;
 }
 
 
@@ -32,7 +40,7 @@ body {
   letter-spacing: 0px;
   background-size: cover;
   /* color: #27A7E7; */
-  margin-left: 30.3%;
+  margin-left: 20.3%;
 }
 .new-btn {
   width: 20vh;
@@ -122,27 +130,27 @@ body {
     }
 
     .btn {
-      font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
+      font: normal normal bold 1.8vh/1.8vh 'SF Pro', sans-serif;
       font-weight: bold;
-      width: 20vh;
+      width: 22vh;
       height: 7vh;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
-      margin-left: 30.3%;
-    }
+      margin-left: 20.3%;
+    } 
     
     
     .buti {
-      font: normal normal bold 1.5vh/1.5vh 'SF Pro', sans-serif;
+      font: normal normal bold 1.8vh/1.8vh 'SF Pro', sans-serif;
       font-weight: bold;
       border-radius: 3.7vh;
-      width: 18vh;
+      width: 20vh;
       height: 12vh;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
-      margin-left: 30.3%;
+      margin-left: 20.3%;
     }
     .new-btn {
       width: 20vh;
@@ -150,7 +158,7 @@ body {
     }
 
 h1 {
-  margin-top:-70px;
+  margin-top:-60px;
   font: normal normal bold 1.4vh/1.4vh 'SF Pro', sans-serif;
   letter-spacing: 0px;
   /* color: #27A7E7; */
@@ -159,7 +167,7 @@ h1 {
 }
 
 h2 {
-  font: normal normal 300 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal 300 1.4vh/1.4vh 'SF Pro', sans-serif;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -232,7 +240,7 @@ h2 {
 
 h1 {
   margin-top:-90px;
-  font: normal normal bold 1.5vh/1.5vh 'SF Pro', sans-serif;
+  font: normal normal bold 1.4vh/1.4vh 'SF Pro', sans-serif;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
