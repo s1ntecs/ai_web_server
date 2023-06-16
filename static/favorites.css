@@ -8,14 +8,12 @@ body {
 /* Стили для кнопок */
 .button-container {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: left;
   align-items: left;
 }
 
 .row {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: left;
   align-items: left;
 }
@@ -197,16 +195,12 @@ h2 {
       /* background-color: white; */
       background-size: cover;
       /* color: #27A7E7; */
-      width: 24vh;
-      height: 7vh;
     }
 
     #second-button {
       /* background-color: #27A7E7; */
       background-size: cover;
       /* color: white; */
-      width: 24vh;
-      height: 7vh;
     }
 }
 @media screen and
@@ -287,7 +281,5 @@ h2 {
       /* background-color: #27A7E7; */
       background-size: cover;
       /* color: white; */
-      width: 20vh;
-      height: 7vh;
     }
 }
