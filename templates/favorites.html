@@ -21,7 +21,8 @@
     hr {
       border: none; /* Убираем границу */
       height: 0.5vh; /* Задаем высоту линии */
-      background-color: var(--tg-theme-text-color), black; /* Задаем цвет фона линии */
+      background-color: var(--tg-theme-text-color);
+      color:  var(--tg-theme-text-color); /* Задаем цвет фона линии */
     }
     h1 {
       color: var(--tg-theme-button-text-color);
@@ -31,12 +32,12 @@
     }
     .btn{
       border: 5px solid var(--tg-theme-button-color);
-       background: var(--tg-theme-button-color, blue);
+       background: var(--tg-theme-button-color);
        color: var(--tg-theme-button-text-color);
     }
     .buti {
-        border: 5px solid var(--tg-theme-button-color), black;
-        background: var(--tg-theme-button-color, blue);
+        border: 5px solid var(--tg-theme-button-color);
+        background: var(--tg-theme-button-color);
         color: var(--tg-theme-button-text-color);
         padding-bottom: 5vh;
       }
@@ -97,7 +98,7 @@
     btn.addEventListener('click', function(){
        tg.sendData("change_char");
     });
- 
+  </script>
 </body>
   
   <div class="btn-container">
