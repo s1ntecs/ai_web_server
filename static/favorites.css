@@ -132,7 +132,7 @@ body {
     .btn {
       font: normal normal bold 1.8vh/1.8vh 'SF Pro', sans-serif;
       font-weight: bold;
-      width: 22vh;
+      width: 23vh;
       height: 7vh;
       letter-spacing: 0px;
       background-size: cover;
@@ -142,10 +142,10 @@ body {
     
     
     .buti {
-      font: normal normal bold 1.8vh/1.8vh 'SF Pro', sans-serif;
+      font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
       font-weight: bold;
       border-radius: 3.7vh;
-      width: 20vh;
+      width: 23vh;
       height: 12vh;
       letter-spacing: 0px;
       background-size: cover;
@@ -153,7 +153,9 @@ body {
       margin-left: 20.3%;
     }
     .new-btn {
-      width: 20vh;
+      font: normal normal bold 1.8vh/1.8vh 'SF Pro', sans-serif;
+
+      width: 23vh;
       height: 21vh;
     }
 
@@ -181,13 +183,13 @@ h2 {
 .fixed-button {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
-  width: 20vh;
+  width: 23vh;
   height: 7vh;
   font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
   #add-char-btn {
-    width: 20vh;
+    width: 23vh;
     height: 7vh;
   }
   #first-button {
@@ -200,7 +202,7 @@ h2 {
       /* background-color: #27A7E7; */
       background-size: cover;
       /* color: white; */
-      width: 25vh;
+      width: 23vh;
       height: 7vh;
     }
 }
