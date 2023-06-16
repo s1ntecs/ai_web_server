@@ -8,13 +8,13 @@ body {
 /* Стили для кнопок */
 .button-container {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: left;
 }
 
 .row {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: left;
 }
 .btn {
