@@ -169,6 +169,8 @@
     <script>
       let userId;
       let tg = window.Telegram.WebApp;
+      tg.expand();
+
       userId = tg.initDataUnsafe.user.id;
       function redirectToFavorites() {
         var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
