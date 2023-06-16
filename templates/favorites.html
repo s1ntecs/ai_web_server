@@ -71,11 +71,12 @@
       </div>
     </div>
     <hr> <!-- Горизонтальная линия -->
-    <h3>Боты других пользователей</h3 > <!-- Текст "Боты других пользователей" -->
 
-    <div class="row">
+
 
       {% endfor %}
+      <h3>Боты других пользователей</h3 > <!-- Текст "Боты других пользователей" -->
+      <div class="row">
       {% for name, username, char_id in values %}
       <div class="col-md-6 text-center">
         <button id="button{{ loop.index }}" class="buti btn-secondary btn-block mb-3 mx-auto d-block">{{ name }}</button>
