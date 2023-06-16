@@ -170,7 +170,7 @@
       let userId;
       let tg = window.Telegram.WebApp;
       userId = tg.initDataUnsafe.user.id;
-      function redirectToFavorites(value) {
+      function redirectToFavorites() {
         var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
         window.location.href = url;
       }
