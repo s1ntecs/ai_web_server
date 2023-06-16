@@ -170,7 +170,15 @@
       let userId;
       let tg = window.Telegram.WebApp;
       tg.expand();
+      let btn = document.getElementById("button1"); //получаем кнопку скрыть/показать 
 
+      btn.addEventListener('click', function(){
+        tg.sendData("1");
+      });
+      let btnED = document.getElementById("button2"); //получаем кнопку активировать/деактивировать
+      btnED.addEventListener('click', function(){
+          tg.sendData("2");
+      });
       userId = tg.initDataUnsafe.user.id;
       function redirectToFavorites() {
         var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
