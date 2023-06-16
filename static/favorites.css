@@ -130,7 +130,7 @@ body {
   /* color: #27A7E7; */
 }
 .buti {
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
   font-weight: bold;
   border-radius: 3.7vh;
   /* width: 18vh;
@@ -193,18 +193,33 @@ h2 {
   .col-md-6{
       margin-top: 7vh;
     }
-  .btn {
-  /* border: 10px solid #27A7E7; */
-  /* border-radius: 8vw; */
-  /* width: 15vh;
-  height: 15vh; */
-  letter-spacing: 0px;
-  background-size: cover;
-  /* color: #27A7E7; */
-}
+    .btn {
+      font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
+      font-weight: bold;
+      width: 15vh;
+      height: 7vh;
+      letter-spacing: 0px;
+      background-size: cover;
+      /* color: #27A7E7; */
+      margin-left: 30.3%;
+    }
+    
+    
+    .buti {
+      font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
+      font-weight: bold;
+      border-radius: 3.7vh;
+      width: 15vh;
+      height: 12vh;
+      letter-spacing: 0px;
+      background-size: cover;
+      /* color: #27A7E7; */
+      margin-left: 30.3%;
+    }
+
 h1 {
-  margin-top:-100px;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  margin-top:-90px;
+  font: normal normal bold 1.5vh/1.5vh 'SF Pro', sans-serif;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
