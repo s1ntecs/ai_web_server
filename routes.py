@@ -36,10 +36,11 @@ async def favorites(request):
     # Создание базы данных и подключение к ней
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
-    int_usr = int(user_id)
     # Получение данных из таблицы characters
     if user_id == "undefined":
-        int_usr = 2
+        user_id = 2
+    int_usr = int(user_id)
+
     c.execute("SELECT char_name, username, char_id FROM characters WHERE user_id = ?", (int_usr,))
     pers_chars = c.fetchall()
     pers_char_names, pers_usernames, pers_char_ids = zip(*pers_chars)
@@ -52,10 +53,6 @@ async def favorites(request):
     return aiohttp_jinja2.render_template('favorites.html', request=request,
                                       context={'values': zip(char_names, usernames, char_ids),
                                                'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
-
-    # return aiohttp_jinja2.render_template('favorites.html', request,
-    #                                       {'values': zip(char_names, usernames, char_ids)},
-    #                                       {'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
 
 
 async def add_character(request):
