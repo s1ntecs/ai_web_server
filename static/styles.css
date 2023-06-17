@@ -7,14 +7,12 @@ body {
 /* Стили для кнопок */
 .button-container {
   display: flex;
-  /* flex-wrap: wrap; */
-  flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: flex-start;
+  align-items: left;
 }
 
 .btn {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
@@ -64,8 +62,8 @@ body {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
   width: 30vh;
-  height: 10vh;
-  font: normal normal bold 3vh/3vh 'SF Pro', sans-serif;
+  height: 14vh;
+  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
 
