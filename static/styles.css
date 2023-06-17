@@ -7,16 +7,21 @@ body {
 /* Стили для кнопок */
 .button-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .btn {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
   /* border: 5px solid #27A7E7; */
   border-radius: 50px;
-  width: 20vh;
-  height: 20vh;
+  width: 10vh;
+  height: 10vh;
   letter-spacing: 0px;
   background-size: cover;
   box-shadow: 0px 30px 0px rgba(0, 0, 0, 0.2);
@@ -240,7 +245,7 @@ h2 {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
   width: 25vh;
-  height: 20vh;
+  height: 10vh;
   font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
@@ -256,7 +261,7 @@ h2 {
       background-size: cover;
       /* color: white; */
       width: 25vh;
-      height: 20vh;
+      height: 10vh;
     }
 }
 @media screen and
@@ -302,8 +307,8 @@ h2 {
 .fixed-button {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
-  width: 25vh;
-  height: 20vh;
+  width: 18vh;
+  height: 10vh;
   font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
@@ -314,7 +319,7 @@ h2 {
 
     #second-button {
       background-size: cover;
-      width: 25vh;
-      height: 20vh;
+      width: 20vh;
+      height: 10vh;
     }
 }
