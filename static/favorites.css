@@ -137,6 +137,7 @@ body {
       background-size: cover;
       /* color: #27A7E7; */
       margin-left: 20.3%;
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
     } 
     
     
@@ -178,6 +179,17 @@ h2 {
   gap: 100px;
   /* margin-left: 20%;
   margin-right: 20%; */
+}
+.btn-container::before {
+  content: '';
+  position: fixed;
+  top: -100;
+  left: -100%;
+  right: -100;
+  width: 300%;
+  height: 200%;
+  backdrop-filter: blur(50px);
+  z-index: -1;
 }
 .fixed-button {
   /* border: 5px solid #27A7E7; */
