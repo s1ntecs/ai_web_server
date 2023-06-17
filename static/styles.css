@@ -302,8 +302,8 @@ h2 {
 .fixed-button {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
-  width: 18vh;
-  height: 10vh;
+  width: 25vh;
+  height: 20vh;
   font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
@@ -314,7 +314,7 @@ h2 {
 
     #second-button {
       background-size: cover;
-      width: 20vh;
-      height: 10vh;
+      width: 25vh;
+      height: 20vh;
     }
 }
