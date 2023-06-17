@@ -243,16 +243,18 @@ h2 {
   width: 300%;
   height: 800%;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(16, 16, 16, 0.8), rgba(16, 16, 16, 0));
-  -webkit-mask-image: linear-gradient(to bottom, transparent 5%, #101010 35%, transparent 95%);
-  mask-image: linear-gradient(to bottom, transparent 5%, #101010 35%, transparent 95%);
-  -webkit-mask-size: 100% 100%;
+  background: linear-gradient(rgba(16, 16, 16, 0.9) 5%, rgba(16, 16, 16, 1) 99%);
+  -webkit-mask-image: linear-gradient(transparent 0.1%, #101010 35%, transparent 85%);
+  mask-image: linear-gradient(transparent 0.1%, #101010 35%, transparent 85%);
+  -webkit-mask-size: 100% 130%;
   mask-size: 100% 100%;
-  -webkit-mask-position: center top;
-  mask-position: center top;
+  -webkit-mask-position: top left;
+  mask-position: top left;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+
+
 
 .fixed-button {
   /* border: 5px solid #27A7E7; */
