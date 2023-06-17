@@ -225,11 +225,22 @@ h2 {
   /* margin-left: 20%;
   margin-right: 20%; */
 }
+.btn-container::before {
+  content: '';
+  position: fixed;
+  top: -80;
+  left: -100%;
+  right: -100%;
+  width: 300%;
+  height: 200%;
+  backdrop-filter: blur(50px);
+  z-index: -1;
+}
 .fixed-button {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
-  width: 20vh;
-  height: 7vh;
+  width: 25vh;
+  height: 10vh;
   font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
@@ -245,7 +256,7 @@ h2 {
       background-size: cover;
       /* color: white; */
       width: 25vh;
-      height: 7vh;
+      height: 10vh;
     }
 }
 @media screen and
@@ -291,8 +302,8 @@ h2 {
 .fixed-button {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
-  width: 16vh;
-  height: 7vh;
+  width: 18vh;
+  height: 10vh;
   font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
@@ -304,6 +315,6 @@ h2 {
     #second-button {
       background-size: cover;
       width: 20vh;
-      height: 7vh;
+      height: 10vh;
     }
 }
