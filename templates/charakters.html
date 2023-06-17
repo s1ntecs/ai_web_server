@@ -56,7 +56,7 @@
     <div class="row">
       <!-- Создание 17 кнопок -->
       <div class="col-md-6 ">
-        <button id="button1" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+        <button id="button1" class="btn btn-primary btn-block mb-3 mx-auto d-block"></button>
       </div>
       <div class="col-md-6">
         <button id="button2" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
@@ -164,28 +164,28 @@
       </div>
     </div>
   </div>
-  <div class="btn-container">
-    <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block">Избранные</button>
-    <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
-  </div>
-    <script>
-      let userId;
-      let tg = window.Telegram.WebApp;
-      tg.expand();
-      let btn = document.getElementById("button1"); //получаем кнопку скрыть/показать 
+</div>
 
-      btn.addEventListener('click', function(){
-        tg.sendData("1");
-      });
-      let btnED = document.getElementById("button2"); //получаем кнопку активировать/деактивировать
-      btnED.addEventListener('click', function(){
-          tg.sendData("2");
-      });
-      userId = tg.initDataUnsafe.user.id;
-      function  () {
-        var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
-        window.location.href = url;
-      }
+<div class="btn-container">
+  <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block">Избранные</button>
+  <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
+</div>
+<script>
+  let userId;
+  let tg = window.Telegram.WebApp;
+  tg.expand();
+  userId = tg.initDataUnsafe.user.id;
+
+  function redirectToFavorites() {
+    var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
+    window.location.href = url;
+  }
+    var button = document.getElementById("button1");
+  button.addEventListener("click", function() {
+    var url = "http://127.0.0.1:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=1";
+    window.location.href = url;
+  });
+</script>
     </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
