@@ -3,6 +3,7 @@ body {
   padding: 20px;
 }
 
+
 /* Стили для кнопок */
 .button-container {
   display: flex;
@@ -18,9 +19,12 @@ body {
   height: 20vh;
   letter-spacing: 0px;
   background-size: cover;
+  box-shadow: 0px 30px 0px rgba(0, 0, 0, 0.2);
   /* color: #27A7E7; */
   /* margin-left: 30.3%; */
 }
+
+
 
 .col-md-6{
   margin-top: 10vh;
@@ -36,10 +40,21 @@ body {
       justify-content: center;
       align-items: center;
       gap: 100px;
+      /* backdrop-filter: blur(28px); */
       /* margin-left: 20%;
       margin-right: 20%; */
     }
-    
+    .btn-container::before {
+      content: '';
+      position: fixed;
+      top: -80;
+      left: -100%;
+      right: -100%;
+      width: 300%;
+      height: 200%;
+      backdrop-filter: blur(50px);
+      z-index: -1;
+    }
 .fixed-button {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
@@ -48,6 +63,7 @@ body {
   font: normal normal bold 3vh/3vh 'SF Pro', sans-serif;
   font-weight: bold;
   }
+
 
   #first-button {
       /* background-color: white; */
