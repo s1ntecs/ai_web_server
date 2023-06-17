@@ -1,30 +1,27 @@
 /* Общие стили */
+@font-face {
+  font-family: 'San Francisco Pro';
+  src: url('fonts/SF-Pro-Display-Regular.otf') format('opentype');
+}
+
 body {
-  padding: 20px;
+  font-family: 'San Francisco Pro', Arial, sans-serif;
 }
 
 
-/* Стили для кнопок */
-.button-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: left;
+body {
+  padding: 20px;
 }
 
 .btn {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* border: 5px solid #27A7E7; */
   border-radius: 50px;
   width: 10vh;
   height: 10vh;
   letter-spacing: 0px;
   background-size: cover;
   box-shadow: 0px 30px 0px rgba(0, 0, 0, 0.2);
-  /* color: #27A7E7; */
-  /* margin-left: 30.3%; */
 }
 
 
@@ -43,11 +40,8 @@ body {
       justify-content: center;
       align-items: center;
       gap: 100px;
-      /* backdrop-filter: blur(28px); */
-      /* margin-left: 20%;
-      margin-right: 20%; */
     }
-    .btn-container::before {
+  .btn-container::before {
       content: '';
       position: fixed;
       top: -80;
@@ -55,7 +49,8 @@ body {
       right: -100%;
       width: 300%;
       height: 200%;
-      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+              backdrop-filter: blur(50px);
       z-index: -1;
     }
 .fixed-button {
@@ -63,27 +58,27 @@ body {
   border-radius: 35px;
   width: 30vh;
   height: 14vh;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh 'San Francisco Pro', sans-serif;
   font-weight: bold;
   }
-
-
+  .btn-container button {
+    text-align: center;
+  }
   #first-button {
-      /* background-color: white; */
-      background-size: cover;
-      /* color: #27A7E7; */
-    }
+    /* background-color: white; */
+    background-size: cover;
+    /* color: #27A7E7; */
+  }
 
-    #second-button {
-      /* background-color: #27A7E7; */
-      background-size: cover;
-      /* color: white; */
-    }
-
+  #second-button {
+    /* background-color: #27A7E7; */
+    background-size: cover;
+    /* color: white; */
+  }
 
     h1 {
       margin-top:-100px;
-      font: normal normal bold 2.6vh/2.6vh 'SF Pro', sans-serif;
+      font: normal normal bold 2.6vh/2.6vh 'San Francisco Pro', Arial;
       letter-spacing: 0px;
       /* color: #27A7E7; */
       opacity: 1;
@@ -91,7 +86,7 @@ body {
   }
 
   h2 {
-      font: normal normal 300 2.6vh/2.6vh 'SF Pro', sans-serif;
+      font: normal normal 300 2.6vh/2.6vh 'San Francisco Pro', sans-serif;
       letter-spacing: 0px;
       /* color: #27A7E7; */
       opacity: 1;
@@ -209,7 +204,7 @@ body {
 }
 h1 {
   margin-top:-100px;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -217,50 +212,27 @@ h1 {
 }
 
 h2 {
-  font: normal normal 300 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal 300 2vh/2vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
   font-weight: lighter;
 }
 .btn-container {
-  gap: 100px;
+  /* gap: 100px; */
   /* margin-left: 20%;
   margin-right: 20%; */
 }
-.btn-container::before {
-  content: '';
-  position: fixed;
-  top: -80;
-  left: -100%;
-  right: -100%;
-  width: 300%;
-  height: 200%;
-  backdrop-filter: blur(50px);
-  z-index: -1;
-}
+
 .fixed-button {
   /* border: 5px solid #27A7E7; */
   border-radius: 35px;
   width: 25vh;
   height: 10vh;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh;
   font-weight: bold;
   }
 
-  #first-button {
-      /* background-color: white; */
-      background-size: cover;
-      /* color: #27A7E7; */
-    }
-
-    #second-button {
-      /* background-color: #27A7E7; */
-      background-size: cover;
-      /* color: white; */
-      width: 25vh;
-      height: 10vh;
-    }
 }
 @media screen and
 (device-height: 896px),
@@ -283,7 +255,7 @@ h2 {
 }
 h1 {
   margin-top:-100px;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -291,7 +263,7 @@ h1 {
 }
 
 h2 {
-  font: normal normal 300 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal 300 2vh/2vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -307,7 +279,7 @@ h2 {
   border-radius: 35px;
   width: 18vh;
   height: 10vh;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh;
   font-weight: bold;
   }
 

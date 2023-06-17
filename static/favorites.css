@@ -1,4 +1,13 @@
 /* Общие стили */
+@font-face {
+  font-family: 'San Francisco Pro';
+  src: url('fonts/SF-Pro-Display-Regular.otf') format('opentype');
+}
+
+body {
+  font-family: 'San Francisco Pro', Arial, sans-serif;
+}
+
 body {
   padding: 20px;
 }
@@ -18,7 +27,7 @@ body {
   align-items: left;
 }
 .btn {
-  font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
+  font: normal normal bold 1.6vh/1.6vh;
   font-weight: bold;
   width: 18vh;
   height: 7vh;
@@ -30,7 +39,7 @@ body {
 
 
 .buti {
-  font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
+  font: normal normal bold 1.6vh/1.6vh;
   font-weight: bold;
   border-radius: 3.7vh;
   width: 18vh;
@@ -69,8 +78,6 @@ body {
       justify-content: center;
       align-items: center;
       gap: 100px;
-      /* margin-left: 20%;
-      margin-right: 20%; */
     }
     .btn-container::before {
       content: '';
@@ -88,12 +95,12 @@ body {
   border-radius: 35px;
   width: 30vh;
   height: 14vh;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh;
   font-weight: bold;
   }
 
   #add-char-btn {
-    font: normal normal bold 1.8vh/1.8vh 'SF Pro', sans-serif;
+    font: normal normal bold 1.8vh/1.8vh;
     border-radius: 2vh;
     width: 25vh;
     height: 7vh;
@@ -117,7 +124,7 @@ body {
 
     h1 {
       margin-top: -4.5vh;
-      font: normal normal 1.4vh/1.4vh 'SF Pro', sans-serif;
+      font: normal normal 1.4vh/1.4vh;
       letter-spacing: 0px;
       /* color: #27A7E7; */
       opacity: 1;
@@ -126,7 +133,7 @@ body {
   }
 
   h2 {
-      font: normal normal 300 2.6vh/2.6vh 'SF Pro', sans-serif;
+      font: normal normal 300 2.6vh/2.6vh;
       letter-spacing: 0px;
       /* color: #27A7E7; */
       opacity: 1;
@@ -135,7 +142,7 @@ body {
 
   h3 {
     /* margin-top: -4.5vh; */
-    font: normal normal bold 2.5vh/2.5vh 'SF Pro', sans-serif;
+    font: normal normal bold 2.5vh/2.5vh;
     letter-spacing: 0px;
     /* color: #27A7E7; */
     opacity: 1;
@@ -150,7 +157,7 @@ body {
     }
 
     .btn {
-      font: normal normal bold 1.8vh/1.8vh 'SF Pro', sans-serif;
+      font: normal normal bold 1.8vh/1.8vh;
       font-weight: bold;
       width: 23vh;
       height: 7vh;
@@ -163,7 +170,7 @@ body {
     
     
     .buti {
-      font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+      font: normal normal bold 2vh/2vh;
       font-weight: bold;
       border-radius: 3.7vh;
       width: 23vh;
@@ -174,7 +181,7 @@ body {
       margin-left: 20.3%;
     }
     .new-btn {
-      font: normal normal bold 1.8vh/1.8vh 'SF Pro', sans-serif;
+      font: normal normal bold 1.8vh/1.8vh;
 
       width: 23vh;
       height: 21vh;
@@ -182,7 +189,7 @@ body {
 
 h1 {
   margin-top:-60px;
-  font: normal normal bold 1.4vh/1.4vh 'SF Pro', sans-serif;
+  font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -190,7 +197,7 @@ h1 {
 }
 
 h2 {
-  font: normal normal 300 1.4vh/1.4vh 'SF Pro', sans-serif;
+  font: normal normal 300 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -217,7 +224,7 @@ h2 {
   border-radius: 35px;
   width: 23vh;
   height: 7vh;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh;
   font-weight: bold;
   }
   #add-char-btn {
@@ -247,7 +254,7 @@ h2 {
       margin-top: 7vh;
     }
     .btn {
-      font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
+      font: normal normal bold 1.6vh/1.6vh;
       font-weight: bold;
       width: 15vh;
       height: 7vh;
@@ -259,7 +266,7 @@ h2 {
     
     
     .buti {
-      font: normal normal bold 1.6vh/1.6vh 'SF Pro', sans-serif;
+      font: normal normal bold 1.6vh/1.6vh;
       font-weight: bold;
       border-radius: 3.7vh;
       width: 15vh;
@@ -272,7 +279,7 @@ h2 {
 
 h1 {
   margin-top:-90px;
-  font: normal normal bold 1.4vh/1.4vh 'SF Pro', sans-serif;
+  font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -280,7 +287,7 @@ h1 {
 }
 
 h2 {
-  font: normal normal 300 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal 300 2vh/2vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -296,7 +303,7 @@ h2 {
   border-radius: 35px;
   width: 16vh;
   height: 7vh;
-  font: normal normal bold 2vh/2vh 'SF Pro', sans-serif;
+  font: normal normal bold 2vh/2vh;
   font-weight: bold;
   }
 
