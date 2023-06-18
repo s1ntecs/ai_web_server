@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Избранные персонажи</title>
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/favorites.css">
@@ -35,18 +35,18 @@
         color: var(--tg-theme-button-text-color);
     }
     .btn{
-      border: 5px solid var(--tg-theme-button-color);
+      border: 1px solid var(--tg-theme-button-color);
        background: var(--tg-theme-button-color);
        color: var(--tg-theme-button-text-color);
     }
     .buti {
-        border: 5px solid var(--tg-theme-button-color);
+        border: 1px solid var(--tg-theme-button-color);
         background: var(--tg-theme-button-color);
         color: var(--tg-theme-button-text-color);
         padding-bottom: 4vh;
       }
     .fixed-button{
-      border: 10px solid var(--tg-theme-button-color);
+      border: 1px solid var(--tg-theme-button-color);
        background: var(--tg-theme-button-color);
        color: var(--tg-theme-button-text-color), blueviolet ;
     }
@@ -82,15 +82,13 @@
 
       {% endfor %}
     </div>
-      <hr> <!-- Горизонтальная линия -->
-      <h3>Боты других пользователей</h3 > <!-- Текст "Боты других пользователей" -->
+      <hr>
+      <h3>Боты других пользователей</h3 >
       <div class="row">
       {% for name, username, char_id in values %}
       <div class="col-md-6 text-center">
         <button id="button{{ loop.index }}" class="buti btn-secondary btn-block mb-3 mx-auto d-block">{{ name }}</button>
-        <h1>{{ username }}</h1>
-
-        <h1>Создатель</h1>
+        <h1> Создатель<br> {{ username }}</h1>
       </div>
       {% endfor %}
     </div>
