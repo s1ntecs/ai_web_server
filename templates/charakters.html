@@ -178,10 +178,16 @@
   function redirectToAll_list() {
     var url = 'https://ai-bot-sintecs.amvera.io/all_chars';
     window.location.href = url;
+    setTimeout(function() {
+      tg.close();
+    }, 2000);
   }
   function redirectToFavorites() {
     var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
     window.location.href = url;
+    setTimeout(function() {
+      tg.close();
+    }, 2000);
   }
   var button = document.getElementById("button1");
   button.addEventListener("click", function() {
