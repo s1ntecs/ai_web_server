@@ -183,14 +183,15 @@
     var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
     window.location.href = url;
   }
-    var button = document.getElementById("button1");
-    button.addEventListener("click", function() {
-      var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=1";
-      window.location.href = url;
-    });
-    window.onload = function() {
+  var button = document.getElementById("button1");
+  button.addEventListener("click", function() {
+    var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=1";
+    window.location.href = url;
+
+    setTimeout(function() {
       tg.close();
-    };
+    }, 2000); // Задержка в 2 секунды (2000 миллисекунд)
+  });
 </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
