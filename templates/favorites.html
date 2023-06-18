@@ -108,6 +108,10 @@
     var url = 'http://65.108.53.155:8081/set_char?user_id=' + encodeURIComponent(userId) + '&char_id=' + encodeURIComponent(charId);
     window.location.href = url;
     }
+    function redirectToAll_list() {
+    var url = 'https://ai-bot-sintecs.amvera.io/all_chars';
+    window.location.href = url;
+    }
     function redirectToAllChar(charId) {
     var url = 'http://65.108.53.155:8081/set_char?user_id=' + encodeURIComponent(userId) + '&char_id=' + encodeURIComponent(charId);
     window.location.href = url;
@@ -117,9 +121,6 @@
       var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=1";
       window.location.href = url;
     });
-    window.onload = function() {
-      tg.close();
-    };
 </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
