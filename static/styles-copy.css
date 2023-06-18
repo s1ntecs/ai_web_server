@@ -56,7 +56,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 25vh;
+    margin-left: 4vh;
   }
   .btn-container::before {
     content: '';
@@ -79,12 +80,25 @@ body {
   }
   
   .fixed-button {
-    /* border: 5px solid #27A7E7; */
-    border-radius: 35px;
-    width: 12vh;
+    border: 5px;
+    border-radius: 2vh;
+    width: 22vh;
     height: 10vh;
     font: normal normal bold 5px/5px 'San Francisco Pro', sans-serif;
     font-weight: bold;
+    }
+    #first-button {
+      width: 25vh;
+      height: 10vh;
+      background-size: cover;
+      /* color: #27A7E7; */
+    }
+  
+    #second-button {
+      width: 35vh;
+      height: 10vh;
+      background-size: cover;
+      /* color: white; */
     }
   h1 {
     font-size: 3vh;
