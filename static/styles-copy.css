@@ -42,8 +42,8 @@ body {
   .btn {
     border: 20px solid #27A7E7;
     border-radius: 6vh;
-    width: 25vh;
-    height: 25vh;
+    width: 22vh;
+    height: 22vh;
     letter-spacing: 0px;
     background-size: cover;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
@@ -56,7 +56,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15vh;
+    gap: 10vh;
     margin-left: 4vh;
   }
   .btn-container::before {
@@ -95,7 +95,7 @@ body {
     border-radius: 2vh;
     width: 22vh;
     height: 10vh;
-    font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif;
+    /* font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif; */
     font-weight: bold;
     }
     #first-button {
@@ -106,7 +106,7 @@ body {
     }
   
     #second-button {
-      width: 35vh;
+      width: 32vh;
       height: 10vh;
       background-size: cover;
       /* color: white; */
@@ -248,21 +248,13 @@ h1 {
 h2 {
   font-size: 1.8vh;
   letter-spacing: 0px;
-  /* color: #27A7E7; */
   opacity: 1;
   font-weight: lighter;
 }
 
 .btn-container {
-  /* position: fixed;
-  left: 50%;
-  top: 90%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center; */
   gap: 3vh;
-  font-size: 1.8vh;
+  font-size: 1.5vh;
   margin-left: 0vh;
 }
 .btn-container::before {
@@ -295,6 +287,10 @@ h2 {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+.fixed-button {
+  font-size: 2vh;
+  font-weight: bold;
+  }
 #first-button {
   width: 20vh;
   height: 7vh;
