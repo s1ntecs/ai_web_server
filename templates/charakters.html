@@ -167,7 +167,7 @@
 </div>
 
 <div class="btn-container">
-  <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block">Избранные</button>
+  <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block" onclick="redirectToAll_list()">Избранные</button>
   <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
 </div>
 <script>
@@ -175,7 +175,10 @@
   let tg = window.Telegram.WebApp;
   tg.expand();
   userId = tg.initDataUnsafe.user.id;
-
+  function redirectToAll_list() {
+    var url = 'http://localhost:8080/all_chars';
+    window.location.href = url;
+  }
   function redirectToFavorites() {
     var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
     window.location.href = url;
