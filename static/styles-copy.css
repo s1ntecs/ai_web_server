@@ -36,12 +36,12 @@ body {
     padding: 2vh;
     background-color: blue;
     color: white;
-    font-size: 16px;
+    font-size: 3vh;
     cursor: pointer;
   }
   .btn {
     border: 20px solid #27A7E7;
-    border-radius: 2vh;
+    border-radius: 6vh;
     width: 25vh;
     height: 25vh;
     letter-spacing: 0px;
@@ -84,7 +84,7 @@ body {
     border-radius: 2vh;
     width: 22vh;
     height: 10vh;
-    font: normal normal bold 5px/5px 'San Francisco Pro', sans-serif;
+    font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif;
     font-weight: bold;
     }
     #first-button {
