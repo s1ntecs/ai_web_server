@@ -305,8 +305,8 @@ h2 {
   .btn {
     font: normal normal bold 1.8vh/1.8vh;
     font-weight: bold;
-    width: 23vh;
-    height: 7vh;
+    width: 25vh;
+    height: 9vh;
     letter-spacing: 0px;
     background-size: cover;
     /* color: #27A7E7; */
@@ -319,8 +319,8 @@ h2 {
     font: normal normal bold 2vh/2vh;
     font-weight: bold;
     border-radius: 3.7vh;
-    width: 18vh;
-    height: 13vh;
+    width: 25vh;
+    height: 12vh;
     letter-spacing: 0px;
     background-size: cover;
     /* color: #27A7E7; */
@@ -334,6 +334,7 @@ h2 {
   }
 
 h1 {
+  font-size: 2vh;
 margin-top:-60px;
 letter-spacing: 0px;
 /* color: #27A7E7; */
@@ -360,11 +361,12 @@ h3 {
 gap: 2vh;
 font-size: 1.5vh;
 margin-left: 0vh;
+box-shadow: 0px 8px 8px #00000029;
 }
 .btn-container::before {
 content: '';
 position: fixed;
-top: -15vh;
+top: -12vh;
 left: -100%;
 right: -100%;
 width: 300%;
@@ -375,7 +377,7 @@ z-index: -1;
 .btn-container::before {
 content: '';
 position: fixed;
-top: -15vh;
+top: -12vh;
 left: -100%;
 right: -100%;
 width: 300%;
@@ -392,19 +394,23 @@ mask-position: top left;
 mask-repeat: no-repeat;
 }
 .fixed-button {
-font-size: 2vh;
 font-weight: bold;
 }
 #first-button {
-width: 17vh;
-height: 7vh;
-background-size: cover;
+  border: 8px;
+  border-radius: 2vh;
+  font-size: 3vh;
+  width: 25vh;
+  height: 10vh;
+  background-size: cover;
+  /* color: #27A7E7; */
 }
 
 #second-button {
-width: 20vh;
-height: 7vh;
-background-size: cover;
+  font-size: 3vh;
+  width: 32vh;
+  height: 10vh;
+  background-size: cover;
+  /* color: white; */
 }
-
 }
