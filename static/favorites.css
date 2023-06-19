@@ -263,22 +263,28 @@ h2 {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+
 .fixed-button {
-  font-size: 2vh;
+  border: 5px;
+  border-radius: 2vh;
+  width: 22vh;
+  height: 10vh;
+  /* font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif; */
   font-weight: bold;
   }
-#first-button {
-  width: 20vh;
-  height: 7vh;
-  background-size: cover;
-}
+  #first-button {
+    width: 25vh;
+    height: 10vh;
+    background-size: cover;
+    /* color: #27A7E7; */
+  }
 
-#second-button {
-  width: 30vh;
-  height: 7vh;
-  background-size: cover;
-}
-
+  #second-button {
+    width: 32vh;
+    height: 10vh;
+    background-size: cover;
+    /* color: white; */
+  }
 }
 @media screen and
 (device-height: 896px),
