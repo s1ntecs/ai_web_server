@@ -181,7 +181,7 @@ body {
     font-weight: lighter;
   }
   h3 {
-    font-size: 3.5vh;
+    font-size: 4vh;
     /* margin-top: -4.5vh; */
     letter-spacing: 0px;
     /* color: #27A7E7; */
@@ -366,7 +366,7 @@ font-weight: lighter;
 }
 
 h3 {
-  font-size: 3vh;
+  font-size: 4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
