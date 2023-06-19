@@ -84,6 +84,7 @@ body {
 }
 
 .btn-container {
+  border-radius: 8vw;
   position: fixed;
   left: 50%;
   top: 93%;
@@ -127,8 +128,7 @@ body {
 }
 
 .fixed-button {
-  border: 5px;
-  border-radius: 2vh;
+  border-radius: 8vw;
   width: 22vh;
   height: 10vh;
   /* font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif; */

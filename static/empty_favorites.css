@@ -401,12 +401,14 @@ mask-repeat: no-repeat;
   font-weight: bold;
   }
   #first-button {
+  border-radius: 8vw;
   width: 20vh;
   height: 7vh;
   background-size: cover;
   }
   
   #second-button {
+  border-radius: 8vw;
   width: 30vh;
   height: 7vh;
   background-size: cover;
