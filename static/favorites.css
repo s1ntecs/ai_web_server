@@ -247,7 +247,7 @@ h3 {
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 200;
   }
 .row {
   margin-top: 3vh;
@@ -382,7 +382,7 @@ h3 {
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 200;
   }
 
 .btn-container {

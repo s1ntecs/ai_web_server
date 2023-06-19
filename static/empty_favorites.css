@@ -350,11 +350,11 @@ h2 {
 
 h1 {
   font-size: 2vh;
-margin-top:-60px;
-letter-spacing: 0px;
-/* color: #27A7E7; */
-opacity: 1;
-font-weight: lighter;
+  margin-top:-60px;
+  letter-spacing: 0px;
+  /* color: #27A7E7; */
+  opacity: 1;
+  font-weight: lighter;
 }
 
 h2 {
@@ -366,11 +366,11 @@ font-weight: lighter;
 }
 
 h3 {
-  font-size: 4vh;
+  font-size: 3.8vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 200;
   }
   .btn-container {
     left: 50%;
