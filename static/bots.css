@@ -52,8 +52,8 @@ body {
   text-align: center;
   font-size: 2vh;
   font-weight: bold;
-  width: 22vh;
-  height: 7vh;
+  width: 289px;
+  height: 186px;
   letter-spacing: 0px;
   letter-spacing: 0px;
   background-size: cover;
@@ -66,8 +66,8 @@ body {
   font: normal normal bold 1.6vh/1.6vh;
   font-weight: bold;
   border-radius: 3.7vh;
-  width: 25vh;
-  height: 17vh;
+  width: 289px;
+  height: 186px;
   letter-spacing: 0px;
   background-size: cover;
   margin-left: 20.3%;
@@ -186,8 +186,8 @@ body {
     .btn {
       font: normal normal bold 1.8vh/1.8vh;
       font-weight: bold;
-      width: 25vh;
-      height: 9vh;
+      width: 289px;
+      height: 186px;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
