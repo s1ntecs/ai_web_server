@@ -358,12 +358,14 @@ h3 {
   opacity: 1;
   font-weight: lighter;
   }
-.btn-container {
-gap: 2vh;
-font-size: 1.5vh;
-margin-left: 0vh;
-box-shadow: 0px 8px 8px #00000029;
-}
+  .btn-container {
+    left: 50%;
+    top: 92.5%;
+    gap: 3vh;
+    font-size: 1.5vh;
+    margin-left: 0vh;
+    box-shadow: 0px 8px 8px #00000029;
+    }
 .btn-container::before {
 content: '';
 position: fixed;
