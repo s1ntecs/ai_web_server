@@ -23,16 +23,19 @@
     hr {
       border: none; /* Убираем границу */
       height: 0.5vh; /* Задаем высоту линии */
-      background-color: var(--tg-theme-text-color);
-      color:  var(--tg-theme-text-color); /* Задаем цвет фона линии */
+      background-color: var(--tg-theme-button-color);
+      color:  var(--tg-theme-button-color); /* Задаем цвет фона линии */
       padding-bottom: 0.5vh;
 
     }
     h1 {
-      color: var(--tg-theme-button-text-color);
+      color: var(--tg-theme-text-color);
     }
     h2 {
-        color: var(--tg-theme-button-text-color);
+        color: var(--tg-theme-text-color);
+    }
+    h3 {
+        color: var(--tg-theme-text-color);
     }
     .btn{
       border: 1px solid var(--tg-theme-button-color);
@@ -48,7 +51,7 @@
     .fixed-button{
       border: 1px solid var(--tg-theme-button-color);
        background: var(--tg-theme-button-color);
-       color: var(--tg-theme-button-text-color), blueviolet ;
+       color: var(--tg-theme-button-text-color);
     }
     .btn:active, .fixed-button:active {
       background: var(--tg-theme-bg-color) !important;
@@ -131,14 +134,7 @@
     var button = document.getElementById("button1");
     button.addEventListener("click", function() {
       var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=1";
-      
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", url);
-      xhr.send();
-      
-      setTimeout(function() {
-        tg.close();
-      }, 2000);
+      window.location.href = url;
     });
 
 </script>

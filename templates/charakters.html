@@ -23,10 +23,10 @@
     }
 
     h1 {
-      color: var(--tg-theme-button-text-color);
+      color: var(--tg-theme-text-color);
     }
     h2 {
-        color: var(--tg-theme-button-text-color);
+        color: var(--tg-theme-text-color);
     }
     .btn{
       border: 1px solid var(--tg-theme-button-color);
@@ -36,7 +36,7 @@
     .fixed-button{
       border: 1px solid var(--tg-theme-button-color);
        background: var(--tg-theme-button-color);
-       color: var(--tg-theme-button-text-color), black;
+       color: var(--tg-theme-button-text-color);
     }
     .btn:active, .fixed-button:active {
       background: var(--tg-theme-bg-color) !important;
@@ -189,26 +189,21 @@
       tg.close();
     }, 2000);
   }
-  var button = document.getElementById("button1");
-  var button = document.getElementById("button1");
+  for (let i = 1; i <= 15; i++) {
+  let button = document.createElement("button");
+  button.id = "button" + i;
+  button.innerText = "Button " + i;
+
   button.addEventListener("click", function() {
-    var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=1";
-    
-    fetch(url)
-      .then(function(response) {
-        if (response.ok) {
-          return response.text();
-        } else {
-          throw new Error("Ошибка: " + response.status);
-        }
-      })
-      .then(function(responseText) {
-        console.log(responseText);
-      })
-      .finally(function() {
-        tg.close();
-      });
+    var charId = i;
+
+    var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=" + charId;
+    window.location.href = url;
   });
+
+  document.body.appendChild(button);
+  }
+
 
 </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
