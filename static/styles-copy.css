@@ -34,7 +34,6 @@ body {
     margin-top: 5vh;
     width: 100%;
     padding: 2vh;
-    background-color: blue;
     color: white;
     font-size: 3vh;
     cursor: pointer;
@@ -46,7 +45,7 @@ body {
     height: 22vh;
     letter-spacing: 0px;
     background-size: cover;
-    box-shadow: 0px 3vh 3vh #00000029;
+    box-shadow: 0px 10vh 10vh #00000029;
   }
   .btn-container {
     position: fixed;
@@ -58,7 +57,7 @@ body {
     align-items: center;
     gap: 10vh;
     margin-left: 0vh;
-    box-shadow: 0px 3vh 3vh #00000029;
+    box-shadow: 0px 10vh 10vh #00000029;
   }
   .btn-container::before {
     content: '';
@@ -122,9 +121,6 @@ body {
     margin-bottom: 0px;
     margin-top: -5px;
   }
-
-
-
 
 #button1 {
   background: transparent url('img/albert-einstein.png');
