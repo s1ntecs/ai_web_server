@@ -4,6 +4,19 @@
   src: url('fonts/SF-Pro-Display-Regular.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'San Francisco Pro';
+  font-weight: 200;
+  src: url('fonts/SF-Pro-Display-Ultralight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'San Francisco Pro';
+  font-weight: bold;
+  src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
+}
+
+
 body {
   font-family: 'San Francisco Pro', Arial, sans-serif;
 }
@@ -116,11 +129,15 @@ body {
       /* color: white; */
     }
   h1 {
+    font-family: 'San Francisco Pro', sans-serif;
+    font-weight: bold;
     font-size: 3vh;
     margin-top: -13px;
   }
   
   h2 {
+    font-family: 'San Francisco Pro', sans-serif;
+    font-weight: 100;
     font-size: 2.5vh;
     margin-bottom: 0px;
     margin-top: -5px;
@@ -245,14 +262,12 @@ h1 {
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
-  font-weight: bold;
 }
 
 h2 {
   font-size: 1.8vh;
   letter-spacing: 0px;
   opacity: 1;
-  font-weight: lighter;
 }
 
 .btn-container {
