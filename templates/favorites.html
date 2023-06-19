@@ -120,9 +120,10 @@
     function redirectToAll_list() {
     var url = 'https://ai-bot-sintecs.amvera.io/all_chars';
     window.location.href = url;
-    setTimeout(function() {
-      tg.close();
-    }, 2000);
+    }
+    function redirectToFavorites() {
+      var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
+      window.location.href = url;
     }
     function redirectToAllChar(charId) {
     var url = 'http://65.108.53.155:8081/set_char?user_id=' + encodeURIComponent(userId) + '&char_id=' + encodeURIComponent(charId);
