@@ -262,7 +262,7 @@ h2 {
 .btn-container::before {
   content: '';
   position: fixed;
-  top: -29vh;
+  top: -20vh;
   left: -100%;
   right: -100%;
   width: 300%;
