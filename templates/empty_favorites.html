@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Избранные персонажи</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/empty_favorites.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
+  <style>
+    body{
+       color: var(--tg-theme-text-color);
+       background: var(--tg-theme-bg-color);
+    }
+
+    .hint{
+       color: var(--tg-theme-hint-color);
+    }
+
+    .link{
+       color: var(--tg-theme-link-color);
+    }
+    hr {
+      border: none; /* Убираем границу */
+      height: 0.3vh; /* Задаем высоту линии */
+      background-color: var(--tg-theme-button-color);
+      color:  var(--tg-theme-button-color); /* Задаем цвет фона линии */
+      padding-bottom: 0.5vh;
+    }
+    h1 {
+      color: var(--tg-theme-button-text-color);
+    }
+    h2 {
+        color: var(--tg-theme-text-color);
+    }
+    h3 {
+        color: var(--tg-theme-button-color);
+    }
+    .btn{
+      border: 1px solid var(--tg-theme-button-color);
+       background: var(--tg-theme-button-color);
+       color: var(--tg-theme-button-text-color);
+    }
+    .buti {
+        border: 1px solid var(--tg-theme-button-color);
+        background: var(--tg-theme-button-color);
+        color: var(--tg-theme-button-text-color);
+        padding-bottom: 4vh;
+      }
+    .fixed-button{
+      border: 1px solid var(--tg-theme-button-color);
+       background: var(--tg-theme-button-color);
+       color: var(--tg-theme-button-text-color);
+    }
+
+    .btn:active, .fixed-button:active, .btn-primary:active {
+      background: var(--tg-theme-bg-color) !important;
+      color: var(--tg-theme-button-text-color) !important;
+      background-color: var(--tg-theme-bg-color) !important;
+    }
+    .btn-primary:hover {
+      background-color: var(--tg-theme-hover-color);
+    }
+ </style>
+</head>
+<body>
+  <div class="container">
+    <div class="centered-row text-center">
+
+    <hr> <!-- Горизонтальная линия -->
+    <h3>Пока тут пусто...<br>Создайте бота первым</h3> <!-- Текст "Твои боты" -->
+    <button id="add-char-btn" class="btn btn-secondary mb-3 mx-auto d-block" onclick="redirectCreateChar()"><span>Создать</span></button>
+  </div>
+    <div class="row">
+    </div>
+      <hr>
+      <h3>Боты других пользователей</h3 >
+      <div class="row">
+      {% for name, username, char_id in values %}
+      <div class="col-md-6 text-center">
+        <button id="button{{ loop.index }}" class="buti btn-secondary btn-block mb-3 mx-auto d-block" onclick="redirectToAllChar('{{ char_id }}')">{{ name }}</button>
+        <h1> Создатель<br> {{ username }}</h1>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+  
+  <div class="btn-container">
+    <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block" onclick="redirectToAll_list()">Избранные</button>
+    <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block active" onclick="redirectToFavorites()">Боты сообщества</button>
+  </div>
+  <script>
+    let userId;
+    let tg = window.Telegram.WebApp;
+    tg.expand();
+    userId = tg.initDataUnsafe.user.id;
+    function redirectCreateChar() {
+      var url = 'http://65.108.53.155:8081/set_char?user_id=' + encodeURIComponent(userId) + "&char_id=create";
+      window.location.href = url;
+      setTimeout(function() {
+      tg.close();
+    }, 2000);
+    }
+    function redirectToPersChar(charId) {
+    var url = 'http://65.108.53.155:8081/set_char?user_id=' + encodeURIComponent(userId) + '&char_id=' + encodeURIComponent(charId);
+    window.location.href = url;
+    setTimeout(function() {
+      tg.close();
+    }, 2000);
+    }
+    function redirectToAll_list() {
+    var url = 'https://ai-bot-sintecs.amvera.io/all_chars';
+    window.location.href = url;
+    }
+    function redirectToFavorites() {
+      var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
+      window.location.href = url;
+    }
+    function redirectToAllChar(charId) {
+    var url = 'http://65.108.53.155:8081/set_char?user_id=' + encodeURIComponent(userId) + '&char_id=' + encodeURIComponent(charId);
+    window.location.href = url;
+    setTimeout(function() {
+      tg.close();
+    }, 2000);
+    }
+
+</script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
