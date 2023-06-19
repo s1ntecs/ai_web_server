@@ -190,18 +190,11 @@
     }, 2000);
   }
   for (let i = 1; i <= 15; i++) {
-  let button = document.createElement("button");
-  button.id = "button" + i;
-  button.innerText = "Button " + i;
-
-  button.addEventListener("click", function() {
-    var charId = i;
-
-    var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=" + charId;
-    window.location.href = url;
-  });
-
-  document.body.appendChild(button);
+    var button = document.getElementById("button" + i);
+    button.addEventListener("click", function() {
+      var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=" + i;
+      window.location.href = url;
+    });
   }
 
 
