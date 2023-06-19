@@ -57,7 +57,6 @@ body {
   margin-top: 0vh;
   width: 100%;
   padding: 2vh;
-  font-size: 1vh;
   cursor: pointer;
 }
 .btn {
@@ -257,7 +256,7 @@ h3 {
   left: 50%;
   top: 92.5%;
   gap: 3vh;
-  font-size: 3vh;
+  font-size: 2vh;
   margin-left: 0vh;
 }
 .btn-container::before {
@@ -301,7 +300,6 @@ h3 {
   }
   #first-button {
     border-radius: 8vw;
-    font-size: 3vh;
     width: 25vh;
     height: 10vh;
     background-size: cover;
@@ -310,7 +308,6 @@ h3 {
 
   #second-button {
     border-radius: 8vw;
-    font-size: 3vh;
     width: 32vh;
     height: 10vh;
     background-size: cover;
