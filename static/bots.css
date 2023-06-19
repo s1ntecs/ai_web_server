@@ -54,7 +54,7 @@ body {
   letter-spacing: 0px;
   letter-spacing: 0px;
   background-size: cover;
-  box-shadow: 0px 1px 1px #00000029;
+  box-shadow: 0px 10px 10px #00000029;
 }
 
 
@@ -68,7 +68,7 @@ body {
   letter-spacing: 0px;
   background-size: cover;
   margin-left: 20.3%;
-  box-shadow: 0px 1px 1px #00000029;
+  box-shadow: 0px 10px 10px #00000029;
 }
 
 .new-btn {
@@ -189,7 +189,7 @@ body {
       background-size: cover;
       /* color: #27A7E7; */
       margin-left: 20.3%;
-      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 8px 8px #00000029;
     } 
     
     
@@ -203,6 +203,7 @@ body {
       background-size: cover;
       /* color: #27A7E7; */
       margin-left: 20.3%;
+      box-shadow: 0px 8px 8px #00000029;
     }
     .new-btn {
       font: normal normal bold 1.8vh/1.8vh;
@@ -279,6 +280,9 @@ h2 {
   background-size: cover;
 }
 
+.new-btn {
+  box-shadow: 0px 8px 8px #00000029;
+}
 }
 @media screen and
 (device-height: 896px),
@@ -300,7 +304,7 @@ h2 {
     background-size: cover;
     /* color: #27A7E7; */
     margin-left: 20.3%;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 8px #00000029;
   } 
   
   
@@ -314,12 +318,16 @@ h2 {
     background-size: cover;
     /* color: #27A7E7; */
     margin-left: 20.3%;
+    box-shadow: 0px 8px 8px #00000029;
+
   }
   .new-btn {
     font: normal normal bold 1.8vh/1.8vh;
 
     width: 23vh;
     height: 21vh;
+    box-shadow: 0px 8px 8px #00000029;
+
   }
 
 h1 {

@@ -46,7 +46,7 @@ body {
     height: 22vh;
     letter-spacing: 0px;
     background-size: cover;
-    box-shadow: 0px 1px 1px #00000029;
+    box-shadow: 0px 15px 15px #00000029;
   }
   .btn-container {
     position: fixed;
@@ -58,7 +58,7 @@ body {
     align-items: center;
     gap: 10vh;
     margin-left: 0vh;
-    box-shadow: 0px 1px 1px #00000029;
+    box-shadow: 0px 15px 15px #00000029;
   }
   .btn-container::before {
     content: '';
@@ -233,8 +233,7 @@ body {
   height: 17vh;
   letter-spacing: 0px;
   background-size: cover;
-  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
-  /* color: #27A7E7; */
+  box-shadow: 0px 8px 8px #00000029;
 }
 
 h1 {
@@ -257,6 +256,8 @@ h2 {
   gap: 3vh;
   font-size: 1.5vh;
   margin-left: 0vh;
+  box-shadow: 0px 8px 8px #00000029;
+
 }
 .btn-container::before {
   content: '';
@@ -392,4 +393,5 @@ background-size: cover;
 width: 30vh;
 height: 7vh;
 background-size: cover;
+}
 }
