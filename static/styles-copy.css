@@ -49,9 +49,7 @@ body {
     background-size: cover;
     box-shadow: 0px 3vh 3vh #00000029;
   }
-  .btn:active {
-    box-shadow: none; /* Устанавливаем тень на "none" при активации кнопки */
-  }
+
   .btn-container {
     position: fixed;
     left: 50%;
@@ -359,6 +357,7 @@ font-weight: lighter;
 gap: 3vh;
 font-size: 1.5vh;
 margin-left: 0vh;
+box-shadow: 0px 8px 8px #00000029;
 }
 .btn-container::before {
 content: '';

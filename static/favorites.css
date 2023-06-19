@@ -86,14 +86,14 @@ body {
 .btn-container {
   position: fixed;
   left: 50%;
-  top: 90%;
+  top: 93%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10vh;
   margin-left: 0vh;
-  box-shadow: 0px 1px 1px #00000029;
+  box-shadow: 0px 3vh 3vh #00000029;
 }
 .btn-container::before {
   content: '';
@@ -291,6 +291,7 @@ h2 {
     /* color: white; */
   }
 }
+
 @media screen and
 (device-height: 896px),
 (device-height: 844px), (device-height: 851px),
@@ -358,7 +359,7 @@ h3 {
   font-weight: lighter;
   }
 .btn-container {
-gap: 2vh;
+gap: 3vh;
 font-size: 1.5vh;
 margin-left: 0vh;
 box-shadow: 0px 8px 8px #00000029;
@@ -394,23 +395,18 @@ mask-position: top left;
 mask-repeat: no-repeat;
 }
 .fixed-button {
-font-weight: bold;
-}
-#first-button {
-  border: 8px;
-  border-radius: 2vh;
-  font-size: 3vh;
-  width: 25vh;
-  height: 10vh;
+  font-size: 2vh;
+  font-weight: bold;
+  }
+  #first-button {
+  width: 20vh;
+  height: 7vh;
   background-size: cover;
-  /* color: #27A7E7; */
-}
-
-#second-button {
-  font-size: 3vh;
-  width: 32vh;
-  height: 10vh;
+  }
+  
+  #second-button {
+  width: 30vh;
+  height: 7vh;
   background-size: cover;
-  /* color: white; */
-}
+  }
 }

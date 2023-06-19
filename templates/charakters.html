@@ -43,11 +43,14 @@
 }
     .btn:active, .fixed-button:active, .btn-primary:active {
       background: var(--tg-theme-bg-color) !important;
-      color: var(--tg-theme-button-text-color) !important;
+      color: var(--tg-theme-bg-color) !important;
       background-color: var(--tg-theme-bg-color) !important;
     }
     .btn-primary:hover {
       background-color: var(--tg-theme-hover-color);
+    }
+    #first_button:active {
+      color: black;
     }
 
  </style>
@@ -168,8 +171,8 @@
 </div>
 
 <div class="btn-container">
-  <button id="first-button" class="btn btn-primary fixed-button mx-auto d-block active" onclick="redirectToAll_list()">Избранные</button>
-  <button id="second-button" class="btn btn-primary fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
+  <button id="first-button" class="btn fixed-button mx-auto d-block active" onclick="redirectToAll_list()">Избранные</button>
+  <button id="second-button" class="btn fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
 </div>
 <script>
   let userId;

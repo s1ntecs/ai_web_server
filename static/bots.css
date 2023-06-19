@@ -390,23 +390,18 @@ mask-position: top left;
 mask-repeat: no-repeat;
 }
 .fixed-button {
-font-weight: bold;
-}
-#first-button {
-  border: 8px;
-  border-radius: 2vh;
-  font-size: 3vh;
-  width: 25vh;
-  height: 10vh;
+  font-size: 2vh;
+  font-weight: bold;
+  }
+  #first-button {
+  width: 20vh;
+  height: 7vh;
   background-size: cover;
-  /* color: #27A7E7; */
-}
-
-#second-button {
-  font-size: 3vh;
-  width: 32vh;
-  height: 10vh;
+  }
+  
+  #second-button {
+  width: 30vh;
+  height: 7vh;
   background-size: cover;
-  /* color: white; */
-}
+  }
 }

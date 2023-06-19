@@ -18,18 +18,23 @@ async def favorites(request):
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
     # Получение данных из таблицы characters
+    c.execute("SELECT char_name, username, char_id FROM characters")
+    all_chars = c.fetchall()
+    char_names, usernames, char_ids = zip(*all_chars)
     if user_id == "undefined":
         pers_char_names = pers_usernames = pers_char_ids = []
     else:
         int_usr = int(user_id)
         c.execute("SELECT char_name, username, char_id FROM characters WHERE user_id = ?", (int_usr,))
         pers_chars = c.fetchall()
-        pers_char_names, pers_usernames, pers_char_ids = zip(*pers_chars)
         if not pers_chars:
             pers_char_names = pers_usernames = pers_char_ids = []
-    c.execute("SELECT char_name, username, char_id FROM characters")
-    all_chars = c.fetchall()
-    char_names, usernames, char_ids = zip(*all_chars)
+            return aiohttp_jinja2.render_template('empty_favorites.html', request=request,
+                                      context={'values': zip(char_names, usernames, char_ids),
+                                               'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
+
+        else:
+            pers_char_names, pers_usernames, pers_char_ids = zip(*pers_chars)
     # Закрытие соединения с базой данных
     conn.close()
     return aiohttp_jinja2.render_template('favorites.html', request=request,
