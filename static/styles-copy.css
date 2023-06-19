@@ -223,9 +223,6 @@ body {
 }
 
 @media only screen and (max-device-height: 670px) {
-  .col-md-6{
-      margin-top: 5vh;
-    }
   .btn {
   /* border: 10px solid #27A7E7; */
   border-radius: 8vw;
