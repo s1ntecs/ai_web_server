@@ -185,10 +185,9 @@ body {
     }
 
     .btn {
-      font: normal normal bold 1.8vh/1.8vh;
       font-weight: bold;
-      width: 23vh;
-      height: 7vh;
+      width: 25vh;
+      height: 8vh;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
@@ -198,11 +197,10 @@ body {
     
     
     .buti {
-      font: normal normal bold 2vh/2vh;
       font-weight: bold;
       border-radius: 3.7vh;
-      width: 23vh;
-      height: 12vh;
+      width: 25vh;
+      height: 14vh;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
@@ -211,7 +209,7 @@ body {
     .new-btn {
       font: normal normal bold 1.8vh/1.8vh;
 
-      width: 23vh;
+      width: 25vh;
       height: 21vh;
     }
 
@@ -234,7 +232,7 @@ h2 {
 
 .btn-container {
   gap: 2vh;
-  font-size: 1.5vh;
+  font-size: 3vh;
   margin-left: 0vh;
 }
 .btn-container::before {
@@ -277,6 +275,7 @@ h2 {
   font-weight: bold;
   }
   #first-button {
+    font-size: 3vh;
     width: 25vh;
     height: 10vh;
     background-size: cover;
@@ -284,6 +283,8 @@ h2 {
   }
 
   #second-button {
+    font-size: 3vh;
+
     width: 32vh;
     height: 10vh;
     background-size: cover;
