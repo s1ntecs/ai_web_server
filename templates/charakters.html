@@ -178,22 +178,19 @@
   function redirectToAll_list() {
     var url = 'https://ai-bot-sintecs.amvera.io/all_chars';
     window.location.href = url;
-    setTimeout(function() {
-      tg.close();
-    }, 2000);
   }
   function redirectToFavorites() {
     var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
     window.location.href = url;
-    setTimeout(function() {
-      tg.close();
-    }, 2000);
   }
   for (let i = 1; i <= 15; i++) {
     var button = document.getElementById("button" + i);
     button.addEventListener("click", function() {
       var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=" + i;
       window.location.href = url;
+      setTimeout(function() {
+      tg.close();
+    }, 2000);
     });
   }
 
