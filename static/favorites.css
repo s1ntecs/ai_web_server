@@ -187,13 +187,13 @@ body {
     /* color: #27A7E7; */
     opacity: 1;
     text-align: center;
-
+    font-weight: 200;
 }
 
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
   .col-md-6{
-      margin-top: 7vh;
+      margin-top: 0vh;
     }
 
     .btn {
@@ -242,7 +242,17 @@ h2 {
   font-weight: lighter;
 }
 
-
+h3 {
+  font-size: 3vh;
+  letter-spacing: 0px;
+  /* color: #27A7E7; */
+  opacity: 1;
+  font-weight: lighter;
+  }
+.row {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
 .btn-container {
   left: 50%;
   top: 92.5%;
@@ -322,7 +332,7 @@ h2 {
   .btn {
     font: normal normal bold 1.8vh/1.8vh;
     font-weight: bold;
-    width: 25vh;
+    width: 24vh;
     height: 9vh;
     letter-spacing: 0px;
     background-size: cover;
@@ -336,7 +346,7 @@ h2 {
     font: normal normal bold 2vh/2vh;
     font-weight: bold;
     border-radius: 3.7vh;
-    width: 25vh;
+    width: 24vh;
     height: 12vh;
     letter-spacing: 0px;
     background-size: cover;
