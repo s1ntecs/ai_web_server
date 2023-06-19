@@ -103,6 +103,9 @@ body {
     /* font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif; */
     font-weight: bold;
     }
+  .fixed-button:active {
+     background: var(--tg-theme-bg-color);
+}
     #first-button {
       width: 25vh;
       height: 10vh;
