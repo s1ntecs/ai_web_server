@@ -100,7 +100,6 @@ body {
     border-radius: 2vh;
     width: 22vh;
     height: 10vh;
-    /* font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif; */
     font-weight: bold;
     }
   .fixed-button:active {
