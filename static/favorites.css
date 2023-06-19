@@ -11,6 +11,9 @@ body {
 body {
   padding: 20px;
 }
+.container {
+  margin-bottom: 15vh;
+}
     .centered-row {
         text-align: center;
     }
@@ -49,12 +52,12 @@ body {
   text-align: center;
   font-size: 2vh;
   font-weight: bold;
-  width: 18vh;
+  width: 22vh;
   height: 7vh;
   letter-spacing: 0px;
   letter-spacing: 0px;
   background-size: cover;
-  box-shadow: 0px 1px 1px #00000029;
+  box-shadow: 0px 8px 8px #00000029;
 }
 
 
@@ -63,12 +66,12 @@ body {
   font: normal normal bold 1.6vh/1.6vh;
   font-weight: bold;
   border-radius: 3.7vh;
-  width: 22vh;
-  height: 14vh;
+  width: 25vh;
+  height: 17vh;
   letter-spacing: 0px;
   background-size: cover;
   margin-left: 20.3%;
-  box-shadow: 0px 1px 1px #00000029;
+  box-shadow: 0px 8px 8px #00000029;
 }
 
 .new-btn {
@@ -156,13 +159,14 @@ body {
   h1 {
     font-size: 2vh;
     margin-top: -9vh;
-    font-weight: lighter;
+    font-weight: normal;
   }
   
   h2 {
     font-size: 2vh;
     margin-bottom: 0px;
     margin-top: -0.5vh;
+    font-weight: lighter;
   }
   h3 {
     font-size: 4vh;
@@ -189,7 +193,7 @@ body {
       background-size: cover;
       /* color: #27A7E7; */
       margin-left: 20.3%;
-      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
     } 
     
     
