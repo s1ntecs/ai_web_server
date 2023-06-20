@@ -162,7 +162,8 @@ body {
     height: 7vh;
     text-align: center;
     padding-bottom: 0;
-    margin-top: 4vh;
+    margin-top: 3vh;
+    margin-bottom: 6vh !important;
   }
   h1 {
     font-size: 2vh;
@@ -324,7 +325,7 @@ h3 {
 
 .btn {
   font-weight: bold;
-  width: 25vh;
+  width: 20vh;
   height: 8vh;
   letter-spacing: 0px;
   background-size: cover;
@@ -337,7 +338,7 @@ h3 {
 .buti {
   font-weight: bold;
   border-radius: 3.7vh;
-  width: 25vh;
+  width: 20vh;
   height: 14vh;
   letter-spacing: 0px;
   background-size: cover;
