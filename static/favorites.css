@@ -295,14 +295,14 @@ h3 {
   font-weight: bold;
   }
   #first-button {
-    font-size: 1.5vh;
+    font-size: 2vh;
     width: 25vh;
     height: 10vh;
     background-size: cover;
   }
 
   #second-button {
-    font-size: 1.5vh;
+    font-size: 2vh;
     border-radius: 8vw;
     width: 32vh;
     height: 10vh;
