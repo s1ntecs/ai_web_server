@@ -22,7 +22,7 @@
     }
     hr {
       border: none; /* Убираем границу */
-      height: 0.3vh; /* Задаем высоту линии */
+      height: 0.1px; /* Задаем высоту линии */
       background-color: var(--tg-theme-button-color);
       color:  var(--tg-theme-button-color); /* Задаем цвет фона линии */
       padding-bottom: 0.5vh;
@@ -53,13 +53,12 @@
        color: var(--tg-theme-button-text-color);
     }
     .btn.active.bg-primary {
+    box-shadow: none !important;
+    outline: none !important;
     border: 3px solid var(--tg-theme-button-color) !important;
     background-color: var(--tg-theme-bg-color) !important;
     color: var(--tg-theme-button-color) !important;
       }
-    .btn-primary:hover {
-      background-color: var(--tg-theme-hover-color);
-    }
  </style>
 </head>
 <body>
@@ -84,7 +83,7 @@
   
   <div class="btn-container">
     <button id="first-button" class="btn fixed-button mx-auto d-block" onclick="redirectToAll_list()">Избранные</button>
-    <button id="second-button" class="btn fixed-button mx-auto d-block bg-primary active active" onclick="redirectToFavorites()">Боты сообщества</button>
+    <button id="second-button" class="btn fixed-button mx-auto d-block bg-primary active" onclick="redirectToFavorites()">Боты сообщества</button>
   </div>
   <script>
     let userId;
@@ -106,7 +105,7 @@
     }, 2000);
     }
     function redirectToAll_list() {
-    var url = 'https://ai-bot-sintecs.amvera.io/all_chars';
+    var url = 'https://ai-bot-sintecs.amvera.io/';
     window.location.href = url;
     }
     function redirectToFavorites() {
