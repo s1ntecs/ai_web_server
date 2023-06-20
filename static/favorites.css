@@ -142,21 +142,18 @@ body {
   border-radius: 8vw;
   width: 22vh;
   height: 10vh;
-  /* font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif; */
   font-weight: bold;
   }
   #first-button {
     width: 25vh;
     height: 10vh;
     background-size: cover;
-    /* color: #27A7E7; */
   }
 
   #second-button {
     width: 32vh;
     height: 10vh;
     background-size: cover;
-    /* color: white; */
   }
   #add-char-btn {
     font: normal normal bold 1.8vh/1.8vh;
@@ -244,7 +241,6 @@ h2 {
 h3 {
   font-size: 4vh;
   letter-spacing: 0px;
-  /* color: #27A7E7; */
   opacity: 1;
   font-weight: normal;
   }
@@ -299,19 +295,18 @@ h3 {
   font-weight: bold;
   }
   #first-button {
-    border-radius: 8vw;
+    font-size: 3vh;
     width: 25vh;
     height: 10vh;
     background-size: cover;
-    /* color: #27A7E7; */
   }
 
   #second-button {
+    font-size: 3vh;
     border-radius: 8vw;
     width: 32vh;
     height: 10vh;
     background-size: cover;
-    /* color: white; */
   }
 }
 
