@@ -370,12 +370,9 @@ font-weight: lighter;
 }
 
 h3 {
-  font-size: 4vh;
-  letter-spacing: 0px;
-  /* color: #27A7E7; */
-  opacity: 1;
+  font-size: 3.8vh;
   font-weight: normal;
-  }
+}
 
 .btn-container {
 left: 50%;
@@ -416,19 +413,22 @@ mask-position: top left;
 mask-repeat: no-repeat;
 }
 .fixed-button {
+  border: 3px;
   font-size: 2vh;
   font-weight: bold;
   }
   #first-button {
-  border-radius: 8vw;
+  border: 3px;
+  /* border-radius: 8vw; */
   width: 20vh;
   height: 7vh;
   background-size: cover;
   box-shadow: none;
-  }
+}
   
-  #second-button {
-  border-radius: 8vw;
+#second-button {
+  border: 3px;
+  /* border-radius: 8vw; */
   width: 30vh;
   height: 7vh;
   background-size: cover;

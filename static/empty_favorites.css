@@ -412,7 +412,7 @@ mask-repeat: no-repeat;
   }
   #first-button {
   border: 3px;
-  border-radius: 8vw;
+  /* border-radius: 8vw; */
   width: 20vh;
   height: 7vh;
   background-size: cover;
@@ -421,7 +421,7 @@ mask-repeat: no-repeat;
   
 #second-button {
   border: 3px;
-  border-radius: 8vw;
+  /* border-radius: 8vw; */
   width: 30vh;
   height: 7vh;
   background-size: cover;
