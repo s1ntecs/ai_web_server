@@ -403,6 +403,7 @@ mask-repeat: no-repeat;
 .fixed-button {
 border: 3px;
 font-size: 2vh;
+font-weight: bold;
 }
 #first-button {
 border: 3px;

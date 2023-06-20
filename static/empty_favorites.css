@@ -411,17 +411,19 @@ mask-repeat: no-repeat;
   font-weight: bold;
   }
   #first-button {
+  border: 3px;
   border-radius: 8vw;
   width: 20vh;
   height: 7vh;
   background-size: cover;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
 }
   
 #second-button {
+  border: 3px;
   border-radius: 8vw;
   width: 30vh;
-  height: 9vh;
+  height: 7vh;
   background-size: cover;
   box-shadow: none;
   }
