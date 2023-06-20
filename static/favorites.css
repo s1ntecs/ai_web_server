@@ -432,6 +432,6 @@ mask-repeat: no-repeat;
   width: 30vh;
   height: 9vh;
   background-size: cover;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
   }
 }
