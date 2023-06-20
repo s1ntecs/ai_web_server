@@ -139,9 +139,11 @@ body {
 }
 
 .fixed-button {
-  border-radius: 8vw;
+  border: 5px;
+  border-radius: 2vh;
   width: 22vh;
   height: 10vh;
+  /* font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif; */
   font-weight: bold;
   }
   #first-button {
@@ -411,20 +413,18 @@ mask-repeat: no-repeat;
   font-weight: bold;
   }
   #first-button {
-  border: 3px;
-  /* border-radius: 8vw; */
+  border-radius: 8vw;
   width: 20vh;
   height: 7vh;
   background-size: cover;
-  box-shadow: none;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
 }
   
-#second-button {
-  border: 3px;
-  /* border-radius: 8vw; */
+  #second-button {
+  border-radius: 8vw;
   width: 30vh;
   height: 7vh;
   background-size: cover;
-  box-shadow: none;
-  }
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
 }
