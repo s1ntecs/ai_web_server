@@ -15,7 +15,7 @@ async def index(request):
 async def favorites(request):
     user_id = urllib.parse.parse_qs(request.query_string).get('value', [None])[0]
     # Создание базы данных и подключение к ней
-    conn = sqlite3.sql3db('database.db')
+    conn = sqlite3.connect('sql3db.db')
     c = conn.cursor()
     # Получение данных из таблицы characters
     c.execute("SELECT char_name, username, char_id FROM characters")
