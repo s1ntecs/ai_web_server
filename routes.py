@@ -43,7 +43,7 @@ async def favorites(request):
 
 
 async def all_bots(request):
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('sql3db.db')
     c = conn.cursor()
     c.execute("SELECT char_name, username, char_id FROM characters")
     all_chars = c.fetchall()
