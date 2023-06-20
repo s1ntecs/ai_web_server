@@ -239,7 +239,13 @@ body {
   /* color: #27A7E7; */
 }
 
-@media only screen and (max-device-height: 670px) {
+@media only screen and (device-height: 22670px)
+/* (max-device-height: 670px), (device-height: 896px),
+(device-height: 844px), (device-height: 851px),
+(device-height: 932px), (device-height: 852px),
+(device-height: 926px), (device-height: 896px),
+(device-height: 844px)  */
+{
   .col-md-6{
       margin-top: 5vh;
     }
