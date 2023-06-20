@@ -186,7 +186,7 @@ body {
     /* color: #27A7E7; */
     opacity: 1;
     text-align: center;
-    font-weight: 200;
+    font-weight: normal;
 }
 
 /* Адаптивные стили */
@@ -246,7 +246,7 @@ h3 {
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
-  font-weight: 200;
+  font-weight: normal;
   }
 .row {
   margin-top: 3vh;
@@ -379,7 +379,7 @@ h3 {
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
-  font-weight: 200;
+  font-weight: normal;
   }
 
 .btn-container {
