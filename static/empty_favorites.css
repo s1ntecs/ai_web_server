@@ -165,7 +165,7 @@ body {
     text-align: center;
     padding-bottom: 0;
     margin-top: 3vh;
-    margin-bottom: 5vh;
+    margin-bottom: 5vh !important;
   }
   h1 {
     font-size: 2vh;
