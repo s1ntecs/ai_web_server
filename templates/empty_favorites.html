@@ -22,10 +22,9 @@
     }
     hr {
       border: none; /* Убираем границу */
-      height: 0.1px; /* Задаем высоту линии */
-      position: relative; /* Устанавливаем позицию элемента */
-      background-color: black;
-      color: var(--tg-theme-button-color); /* Задаем цвет фона линии */
+      height: 0.3vh; /* Задаем высоту линии */
+      background-color: var(--tg-theme-button-color);
+      color:  var(--tg-theme-button-color); /* Задаем цвет фона линии */
       padding-bottom: 0.5vh;
     }
     h1 {
@@ -85,7 +84,7 @@
   
   <div class="btn-container">
     <button id="first-button" class="btn fixed-button mx-auto d-block" onclick="redirectToAll_list()">Избранные</button>
-    <button id="second-button" class="btn fixed-button mx-auto d-block bg-primary active" onclick="redirectToFavorites()">Боты сообщества</button>
+    <button id="second-button" class="btn fixed-button mx-auto d-block bg-primary active active" onclick="redirectToFavorites()">Боты сообщества</button>
   </div>
   <script>
     let userId;
