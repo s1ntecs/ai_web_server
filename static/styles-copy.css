@@ -350,8 +350,7 @@ width: 17vh;
 height: 17vh;
 letter-spacing: 0px;
 background-size: cover;
-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
-/* color: #27A7E7; */
+box-shadow: 0px 8px 8px #00000029;
 }
 
 h1 {
@@ -360,26 +359,25 @@ margin-top: -5vh;
 letter-spacing: 0px;
 /* color: #27A7E7; */
 opacity: 1;
-font-weight: bold;
 }
 
 h2 {
 font-size: 1.8vh;
 letter-spacing: 0px;
 opacity: 1;
-font-weight: lighter;
 }
 
 .btn-container {
 gap: 3vh;
 font-size: 1.5vh;
 margin-left: 0vh;
-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+/* box-shadow: 0px 8px 8px #00000029; */
+
 }
 .btn-container::before {
 content: '';
 position: fixed;
-top: -25vh;
+top: -20h;
 left: -100%;
 right: -100%;
 width: 300%;
@@ -390,7 +388,7 @@ z-index: -1;
 .btn-container::before {
 content: '';
 position: fixed;
-top: -25vh;
+top: -20vh;
 left: -100%;
 right: -100%;
 width: 300%;
@@ -406,26 +404,26 @@ mask-position: top left;
 -webkit-mask-repeat: no-repeat;
 mask-repeat: no-repeat;
 }
+
 .fixed-button {
-/* border: 3px; */
-font-size: 2vh;
+border: 3px;
+border-radius: 8vw;
+width: 22vh;
+height: 10vh;
+/* font: normal normal bold 3vh/3vh 'San Francisco Pro', sans-serif; */
 font-weight: bold;
 }
 #first-button {
-border-radius: 8vw;
-/* border: 3px; */
-width: 20vh;
-height: 7vh;
-background-size: cover;
-box-shadow: none;
+  width: 20vh;
+  height: 7vh;
+  background-size: cover;
+  /* color: #27A7E7; */
 }
 
 #second-button {
-border-radius: 8vw;
-/* border: 3px; */
-width: 30vh;
-height: 7vh;
-background-size: cover;
-box-shadow: none;
+  width: 30vh;
+  height: 7vh;
+  background-size: cover;
+  /* color: white; */
 }
 }
