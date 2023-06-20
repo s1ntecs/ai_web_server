@@ -401,12 +401,13 @@ mask-position: top left;
 mask-repeat: no-repeat;
 }
 .fixed-button {
-border: 3px;
+/* border: 3px; */
 font-size: 2vh;
 font-weight: bold;
 }
 #first-button {
-border: 3px;
+border-radius: 8vw;
+/* border: 3px; */
 width: 20vh;
 height: 7vh;
 background-size: cover;
@@ -414,7 +415,8 @@ box-shadow: none;
 }
 
 #second-button {
-border: 3px;
+border-radius: 8vw;
+/* border: 3px; */
 width: 30vh;
 height: 7vh;
 background-size: cover;
