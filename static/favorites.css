@@ -310,12 +310,12 @@ h3 {
   }
 }
 
-@media screen and
-(device-height: 896px),
+@media screen and (device-height: 22896px)
+/* (device-height: 896px),
 (device-height: 844px), (device-height: 851px),
 (device-height: 932px), (device-height: 852px),
 (device-height: 926px), (device-height: 896px),
-(device-height: 844px)
+(device-height: 844px) */
 {
   .col-md-6{
     margin-top: 7vh;
@@ -473,7 +473,6 @@ mask-repeat: no-repeat;
 }
 .new-btn {
   font: normal normal bold 1.8vh/1.8vh;
-
   width: 25vh;
   height: 21vh;
 }
