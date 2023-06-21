@@ -20,7 +20,7 @@ async def favorites(request):
     conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
     # Получение данных из таблицы characters
-    c.execute("SELECT char_name, username, char_id, actions_count FROM characters")
+    c.execute("SELECT char_name, username, char_id, actions_count FROM characters ORDER BY actions_count DESC")
 
     try:
         all_chars = c.fetchall()
