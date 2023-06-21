@@ -216,10 +216,8 @@ body {
       height: 22vh;
       letter-spacing: 0px;
       background-size: cover;
+      /* color: #27A7E7; */
       margin-left: 20.3%;
-      display: flex;
-      position: relative;
-      top: -50px;
     }
     .new-btn {
       font: normal normal bold 1.8vh/1.8vh;
