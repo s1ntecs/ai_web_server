@@ -1,16 +1,34 @@
 from aiohttp import web
 import urllib.parse
-
+from const import main_chars_activity, url_list
 import aiohttp_jinja2
 import jinja2
 import sqlite3
 import random
 import json
 
-from scripts import refresh_counts
+from scripts import refresh_counts, insert_data_main_chars
 
 
 async def index(request):
+    conn = sqlite3.connect('sql3.db')
+    c = conn.cursor()
+    # Получение данных из таблицы characters
+    c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = 7 ORDER BY actions_count DESC")
+    try:
+        all_chars = c.fetchall()
+        char_names, usernames, char_ids, actions_count = zip(*all_chars)
+    except ValueError:
+        char_names = usernames = char_ids = actions_count = []
+    return aiohttp_jinja2.render_template('charakters.html', request=request,
+                                          context={'values': zip(
+                                           char_names,
+                                           usernames,
+                                           char_ids,
+                                           actions_count,
+                                           main_chars_activity,
+                                           url_list)})
+
     return aiohttp_jinja2.render_template('charakters.html', request, {})
 
 
@@ -62,40 +80,6 @@ async def favorites(request):
                                                                             pers_char_ids,
                                                                             pers_actions_count)})
 
-# async def favorites(request):
-#     user_id = urllib.parse.parse_qs(request.query_string).get('value', [None])[0]
-#     # Создание базы данных и подключение к ней
-#     conn = sqlite3.connect('sql3.db')
-#     c = conn.cursor()
-#     # Получение данных из таблицы characters
-#     c.execute("SELECT char_name, username, char_id FROM characters")
-#     try:
-#         all_chars = c.fetchall()
-#         char_names, usernames, char_ids = zip(*all_chars)
-#     except ValueError:
-#         char_names = usernames = char_ids = []
-
-#     if user_id == "undefined":
-#         pers_char_names = pers_usernames = pers_char_ids = []
-#     else:
-#         int_usr = int(user_id)
-#         c.execute("SELECT char_name, username, char_id FROM characters WHERE user_id = ?", (int_usr,))
-#         pers_chars = c.fetchall()
-#         if not pers_chars:
-#             pers_char_names = pers_usernames = pers_char_ids = []
-#             return aiohttp_jinja2.render_template('empty_favorites.html', request=request,
-#                                       context={'values': zip(char_names, usernames, char_ids),
-#                                                'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
-
-#         else:
-#             pers_char_names, pers_usernames, pers_char_ids = zip(*pers_chars)
-#     # Закрытие соединения с базой данных
-#     conn.close()
-#     return aiohttp_jinja2.render_template('favorites.html', request=request,
-#                                       context={'values': zip(char_names, usernames, char_ids),
-#                                                'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
-
-
 
 async def all_bots(request):
     conn = sqlite3.connect('sql3.db')
@@ -132,6 +116,11 @@ async def add_character(request):
     return web.Response(text='Character added successfully')
 
 
+async def insert_main_chars_data(request):
+    await insert_data_main_chars()
+    return web.Response(text='Character added successfully')
+
+
 async def delete_characters_table(request):
     # Подключение к базе данных
     conn = sqlite3.connect('sql3.db')
@@ -156,5 +145,6 @@ app.router.add_get('/all_chars', all_bots)
 app.router.add_get('/favorites', favorites)
 app.router.add_post('/new_char', add_character)
 app.router.add_get('/del_bd', delete_characters_table)
+app.router.add_get('/main_chars', insert_main_chars_data)
 
 web.run_app(app, host='0.0.0.0')

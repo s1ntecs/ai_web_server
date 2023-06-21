@@ -55,114 +55,17 @@
   <div class="container">
     <div class="row">
       <!-- Создание 17 кнопок -->
-      <div class="col-md-6 ">
-        <button id="button1" class="btn btn-primary btn-block mb-3 mx-auto d-block"></button>
-      </div>
+      {% for name, username, char_id, actions_count, chars_activity, url in values %}
       <div class="col-md-6">
-        <button id="button2" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+        <button id="c{{ char_id }}" class="btn btn-primary btn-block mb-3 mx-auto d-block" onclick="redirectToAllChar('{{ char_id }}')" style="background-image: url('static/{{ url }}'); background-size: cover;">
+          <!-- Вставьте текст или иконку для кнопки здесь -->
+        </button>
+        <h1>{{ name }}</h1>
+        <h2>{{ chars_activity }}</h2>
+        <h2>{{ actions_count }} сообщений</h2>
       </div>
-      <div class="col-md-6 text-center">
-        <h1>Альберт Эйнштейн</h1>
-        <h2>Физик-теоретик</h2>
+      {% endfor %}
       </div>
-      <div class="col-md-6 text-center">
-        <h1>Эминем</h1>
-        <h2>Музыкант</h2>
-      </div>
-      <div class="col-md-6">
-        <button id="button3" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6">
-        <button id="button4" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Гарри Поттер</h1>
-        <h2>Персонаж</h2>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Супер Марио</h1>
-        <h2>Персонаж</h2>
-      </div>
-      <div class="col-md-6">
-        <button id="button5" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6">
-        <button id="button6" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Мистер Бин</h1>
-        <h2>Персонаж</h2>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Психолог</h1>
-        <h2>Персонаж</h2>
-      </div>
-      <div class="col-md-6">
-        <button id="button7" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6">
-        <button id="button8" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Снуп-Дог</h1>
-        <h2>Музыкант</h2>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Стив Джобс</h1>
-        <h2>Предприниматель</h2>
-      </div>
-      <div class="col-md-6">
-        <button id="button9" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6">
-        <button id="button10" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Илон Маск</h1>
-        <h2>Предприниматель</h2>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Гигачад</h1>
-        <h2>интернет-мем</h2>
-      </div>
-      <div class="col-md-6">
-        <button id="button11" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6">
-        <button id="button12" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Кенни Маккорми</h1>
-        <h2>Персонаж</h2>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Майкл Джексон</h1>
-        <h2>Музыкант</h2>
-      </div>
-      <div class="col-md-6">
-        <button id="button13" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6">
-        <button id="button14" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Задрот</h1>
-        <h2>Всезнающий</h2>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Иосиф Сталин</h1>
-        <h2>Государственный деятель</h2>
-      </div>
-      <div class="col-md-6">
-        <button id="button15" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
-      </div>
-      <div class="col-md-6">
-      </div>
-      <div class="col-md-6 text-center">
-        <h1>Тони Старк</h1>
-        <h2>Персонаж</h2>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -183,15 +86,12 @@
     var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
     window.location.href = url;
   }
-  for (let i = 1; i <= 15; i++) {
-    var button = document.getElementById("button" + i);
-    button.addEventListener("click", function() {
-      var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=" + i;
-      window.location.href = url;
-      setTimeout(function() {
+  function redirectToAllChar(charId) {
+    var url = 'http://65.108.53.155:8081/set_char?user_id=' + encodeURIComponent(userId) + '&char_id=' + encodeURIComponent(charId);
+    window.location.href = url;
+    setTimeout(function() {
       tg.close();
     }, 2000);
-    });
   }
 
 
