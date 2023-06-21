@@ -7,6 +7,8 @@ import sqlite3
 import random
 import json
 
+from scripts import refresh_counts
+
 
 async def index(request):
     return aiohttp_jinja2.render_template('charakters.html', request, {})
@@ -19,8 +21,13 @@ async def favorites(request):
     c = conn.cursor()
     # Получение данных из таблицы characters
     c.execute("SELECT char_name, username, char_id FROM characters")
-    all_chars = c.fetchall()
-    char_names, usernames, char_ids = zip(*all_chars)
+    
+    try:
+        all_chars = c.fetchall()
+        char_names, usernames, char_ids = zip(*all_chars)
+    except ValueError:
+        char_names = usernames = char_ids = []
+
     if user_id == "undefined":
         pers_char_names = pers_usernames = pers_char_ids = []
     else:
@@ -73,7 +80,7 @@ async def add_character(request):
 
     # Закрытие соединения с базой данных
     conn.close()
-
+    await refresh_counts()
     return web.Response(text='Character added successfully')
 
 

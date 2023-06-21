@@ -15,7 +15,8 @@ c.execute('''CREATE TABLE IF NOT EXISTS characters
              char_name TEXT,
              username TEXT,
              user_id INT,
-             char_id INT)''')
+             char_id INT,
+             actions_count INT DEFAULT 0)''')
 
 c.execute('''CREATE TABLE IF NOT EXISTS request
              (id INTEGER PRIMARY KEY AUTOINCREMENT,
