@@ -72,7 +72,7 @@
     <button id="add-char-btn" class="btn btn-secondary mb-3 mx-auto d-block" onclick="redirectCreateChar()"><span>Создать нового</span></button>
   </div>
     <div class="row">
-      {% for name, username, char_id in personal_values %}
+      {% for name, username, char_id, actions_count in personal_values %}
   <div class="col-md-6 text-center">
     <button id="button{{ loop.index }}" class="btn btn-primary rounded-pill btn-block mb-3 mx-auto d-block" onclick="redirectToPersChar('{{ char_id }}')">{{ name }}</button>
   </div>
@@ -81,10 +81,10 @@
       <hr>
       <h2>Боты других пользователей</h2 >
       <div class="row">
-      {% for name, username, char_id in values %}
+      {% for name, username, char_id, actions_count in values %}
       <div class="col-md-6 text-center">
         <button id="button{{ loop.index }}" class="buti btn-secondary btn-block mb-3 mx-auto d-block" onclick="redirectToAllChar('{{ char_id }}')">{{ name }}</button>
-        <h1> Создатель<br> {{ username }}</h1>
+        <h1> Создатель<br> {{ username }} <br> {{ actions_count }}</h1>
       </div>
       {% endfor %}
     </div>
