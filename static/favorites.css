@@ -218,7 +218,7 @@ body {
       background-size: cover;
       /* color: #27A7E7; */
       margin-left: 20.3%;
-      padding-bottom: 7vh;
+      padding-bottom: 7vh !important;
     }
     .new-btn {
       font: normal normal bold 1.8vh/1.8vh;
