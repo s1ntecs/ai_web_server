@@ -334,7 +334,6 @@ h3 {
 
 
 .buti {
-  font: normal normal bold 2vh/2vh;
   font-weight: bold;
   border-radius: 3.7vh;
   width: 20vh;
@@ -343,6 +342,8 @@ h3 {
   background-size: cover;
   /* color: #27A7E7; */
   margin-left: 20.3%;
+  display: flex;
+  align-items: flex-start;
 }
 .new-btn {
   font: normal normal bold 1.8vh/1.8vh;
