@@ -20,32 +20,81 @@ async def favorites(request):
     conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
     # Получение данных из таблицы characters
-    c.execute("SELECT char_name, username, char_id FROM characters")
+    c.execute("SELECT char_name, username, char_id, actions_count FROM characters")
+
     try:
         all_chars = c.fetchall()
-        char_names, usernames, char_ids = zip(*all_chars)
+        char_names, usernames, char_ids, actions_count = zip(*all_chars)
     except ValueError:
-        char_names = usernames = char_ids = []
+        char_names = usernames = char_ids = actions_count = []
+        ...
 
     if user_id == "undefined":
-        pers_char_names = pers_usernames = pers_char_ids = []
+        pers_char_names = pers_usernames = pers_char_ids = pers_actions_count = []
+
     else:
         int_usr = int(user_id)
-        c.execute("SELECT char_name, username, char_id FROM characters WHERE user_id = ?", (int_usr,))
+        c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = ?", (int_usr,))
         pers_chars = c.fetchall()
         if not pers_chars:
-            pers_char_names = pers_usernames = pers_char_ids = []
+            pers_char_names = pers_usernames = pers_char_ids = pers_actions_count = []
             return aiohttp_jinja2.render_template('empty_favorites.html', request=request,
-                                      context={'values': zip(char_names, usernames, char_ids),
-                                               'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
+                                                context={'values': zip(char_names,
+                                                                        usernames,
+                                                                        char_ids,
+                                                                        actions_count),
+                                                        'personal_values': zip(pers_char_names,
+                                                                                pers_usernames,
+                                                                                pers_char_ids,
+                                                                                pers_actions_count)})
 
         else:
-            pers_char_names, pers_usernames, pers_char_ids = zip(*pers_chars)
+            pers_char_names, pers_usernames, pers_char_ids, pers_actions_count = zip(*pers_chars)
     # Закрытие соединения с базой данных
     conn.close()
     return aiohttp_jinja2.render_template('favorites.html', request=request,
-                                      context={'values': zip(char_names, usernames, char_ids),
-                                               'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
+                                          context={'values': zip(char_names,
+                                                                    usernames,
+                                                                    char_ids,
+                                                                    actions_count),
+                                                    'personal_values': zip(pers_char_names,
+                                                                            pers_usernames,
+                                                                            pers_char_ids,
+                                                                            pers_actions_count)})
+
+# async def favorites(request):
+#     user_id = urllib.parse.parse_qs(request.query_string).get('value', [None])[0]
+#     # Создание базы данных и подключение к ней
+#     conn = sqlite3.connect('sql3.db')
+#     c = conn.cursor()
+#     # Получение данных из таблицы characters
+#     c.execute("SELECT char_name, username, char_id FROM characters")
+#     try:
+#         all_chars = c.fetchall()
+#         char_names, usernames, char_ids = zip(*all_chars)
+#     except ValueError:
+#         char_names = usernames = char_ids = []
+
+#     if user_id == "undefined":
+#         pers_char_names = pers_usernames = pers_char_ids = []
+#     else:
+#         int_usr = int(user_id)
+#         c.execute("SELECT char_name, username, char_id FROM characters WHERE user_id = ?", (int_usr,))
+#         pers_chars = c.fetchall()
+#         if not pers_chars:
+#             pers_char_names = pers_usernames = pers_char_ids = []
+#             return aiohttp_jinja2.render_template('empty_favorites.html', request=request,
+#                                       context={'values': zip(char_names, usernames, char_ids),
+#                                                'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
+
+#         else:
+#             pers_char_names, pers_usernames, pers_char_ids = zip(*pers_chars)
+#     # Закрытие соединения с базой данных
+#     conn.close()
+#     return aiohttp_jinja2.render_template('favorites.html', request=request,
+#                                       context={'values': zip(char_names, usernames, char_ids),
+#                                                'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids)})
+
 
 
 async def all_bots(request):
