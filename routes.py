@@ -17,7 +17,7 @@ async def index(request):
 async def favorites(request):
     user_id = urllib.parse.parse_qs(request.query_string).get('value', [None])[0]
     # Создание базы данных и подключение к ней
-    conn = sqlite3.connect('sql3db.db')
+    conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
     # Получение данных из таблицы characters
     c.execute("SELECT char_name, username, char_id FROM characters")
@@ -49,7 +49,7 @@ async def favorites(request):
 
 
 async def all_bots(request):
-    conn = sqlite3.connect('sql3db.db')
+    conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
     c.execute("SELECT char_name, username, char_id FROM characters")
     all_chars = c.fetchall()
@@ -70,7 +70,7 @@ async def add_character(request):
     char_id = data.get('char_id')
     user_id = data.get('user_id')
     # Создание базы данных и подключение к ней
-    conn = sqlite3.connect('sql3db.db')
+    conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
 
     # Вставка новой записи в таблицу
@@ -85,7 +85,7 @@ async def add_character(request):
 
 async def delete_characters_table(request):
     # Подключение к базе данных
-    conn = sqlite3.connect('sql3db.db')
+    conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
 
     # Удаление таблицы "characters"

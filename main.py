@@ -6,7 +6,7 @@ from routes import index, add_character
 
 
 # Создание базы данных и подключение к ней
-conn = sqlite3.connect('sql3db.db')
+conn = sqlite3.connect('sql3.db')
 c = conn.cursor()
 
 # Создание таблицы в базе данных

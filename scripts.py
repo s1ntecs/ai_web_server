@@ -21,7 +21,7 @@ async def get_connect():
 
 async def refresh_counts():
     # Создание базы данных и подключение к ней
-    conn = sqlite3.connect('sql3db.db')
+    conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
     connection_db = await get_connect()
     select_query = """
