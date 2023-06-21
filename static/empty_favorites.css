@@ -216,6 +216,10 @@ body {
       background-size: cover;
       /* color: #27A7E7; */
       margin-left: 20.3%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 15vh;
     }
     .new-btn {
       font: normal normal bold 1.8vh/1.8vh;
