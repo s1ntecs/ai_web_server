@@ -211,7 +211,7 @@ body {
       font-weight: bold;
       border-radius: 3.7vh;
       width: 25vh;
-      height: 14vh;
+      height: 18vh;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
@@ -293,7 +293,7 @@ h3 {
   font-weight: bold;
   }
   #first-button {
-    font-size: 3vh;
+    font-size: 2vh;
     width: 25vh;
     height: 10vh;
     background-size: cover;
@@ -301,7 +301,7 @@ h3 {
   }
 
   #second-button {
-    font-size: 3vh;
+    font-size: 2vh;
     border-radius: 8vw;
     width: 32vh;
     height: 10vh;
@@ -338,7 +338,7 @@ h3 {
   font-weight: bold;
   border-radius: 3.7vh;
   width: 20vh;
-  height: 14vh;
+  height: 18vh;
   letter-spacing: 0px;
   background-size: cover;
   /* color: #27A7E7; */
