@@ -218,9 +218,8 @@ body {
       background-size: cover;
       margin-left: 20.3%;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 15vh;
+      position: relative;
+      top: -50px;
     }
     .new-btn {
       font: normal normal bold 1.8vh/1.8vh;
