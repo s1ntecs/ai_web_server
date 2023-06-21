@@ -21,7 +21,6 @@ async def favorites(request):
     c = conn.cursor()
     # Получение данных из таблицы characters
     c.execute("SELECT char_name, username, char_id FROM characters")
-    
     try:
         all_chars = c.fetchall()
         char_names, usernames, char_ids = zip(*all_chars)
