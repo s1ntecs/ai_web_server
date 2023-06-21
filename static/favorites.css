@@ -63,8 +63,8 @@ body {
   text-align: center;
   font-size: 2vh;
   font-weight: bold;
-  width: 22vh;
-  height: 7vh;
+  width: 25vh;
+  height: 8vh;
   letter-spacing: 0px;
   letter-spacing: 0px;
   background-size: cover;
@@ -82,6 +82,7 @@ body {
   letter-spacing: 0px;
   background-size: cover;
   margin-left: 20.3%;
+  padding-bottom: 12vh;
   box-shadow: 0px 8px 8px #00000029;
 }
 
@@ -349,8 +350,6 @@ h3 {
   background-size: cover;
   /* color: #27A7E7; */
   margin-left: 20.3%;
-  display: flex;
-  align-items: flex-start;
 }
 .new-btn {
   font: normal normal bold 1.8vh/1.8vh;
