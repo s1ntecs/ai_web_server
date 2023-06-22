@@ -199,7 +199,7 @@ h4 {
 }
 
 h5 {
-  margin-top: 14vh;
+  margin-top: 17vh;
   font-size: 2vh;
   margin-top: 0vh;
   font-weight: lighter;
@@ -210,7 +210,7 @@ img {
 }
 
 #style_for_all_chars {
-  margin-top: 14vh;
+  margin-top: 0;
 }
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
@@ -278,6 +278,20 @@ h3 {
     /* color: #27A7E7; */
     opacity: 1;
     font-weight: lighter;
+  }
+  h5 {
+    margin-top: 14vh;
+    font-size: 2vh;
+    margin-top: 0vh;
+    font-weight: lighter;
+  }
+  
+  img {
+    margin-top: -10vh;
+  }
+  
+  #style_for_all_chars {
+    margin-top: 14vh;
   }
 .row {
   margin-top: 3vh;
