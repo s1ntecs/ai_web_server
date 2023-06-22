@@ -62,8 +62,11 @@
         </button>
         <h1>{{ name }}</h1>
         <h2>{{ chars_activity }}<br></h2>
-        <h2>{{ actions_count }} сообщений</h2>
-      </div>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <h2 style="display: inline-block;">{{ actions_count }}</h2>
+          <img src="static/img/chat.png" alt="Описание изображения" style="display: inline-block; width: 2vh; height: auto;">
+        </div>
+        </div>
       {% endfor %}
       </div>
   </div>
