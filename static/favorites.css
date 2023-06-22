@@ -206,7 +206,7 @@ h4 {
     .btn {
       font-weight: bold;
       width: 25vh;
-      height: 8vh;
+      height: 10vh;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
@@ -256,7 +256,7 @@ h3 {
   font-weight: normal;
   }
   h4 {
-    margin-top:-3.5vh;
+    margin-top:-5vh;
     font: normal normal bold 1.4vh/1.4vh;
     letter-spacing: 0px;
     /* color: #27A7E7; */
@@ -344,7 +344,7 @@ h3 {
 .btn {
   font-weight: bold;
   width: 22vh;
-  height: 9vh;
+  height: 12vh;
   letter-spacing: 0px;
   background-size: cover;
   /* color: #27A7E7; */
@@ -395,7 +395,7 @@ font-weight: normal;
 }
 h4 {
   font-size: 2vh;
-  margin-top:-4vh;
+  margin-top:-5vh;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
