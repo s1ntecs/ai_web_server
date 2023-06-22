@@ -199,7 +199,7 @@ h4 {
 }
 
 h5 {
-  margin-top: -1vh !important;
+  margin-top: -3vh !important;
   font-size: 2vh;
   margin-top: 0vh;
   font-weight: lighter;
@@ -210,7 +210,7 @@ img {
 }
 
 .style_for_all_chars {
-  margin-top: -0.5;
+  margin-top: -3.5;
 }
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
