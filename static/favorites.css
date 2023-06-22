@@ -199,7 +199,11 @@ h4 {
 }
 
 img {
-  margin-top: -7vh;
+  margin-top: -8vh;
+}
+
+#style_for_all_chars {
+  margin-top: -15vh;
 }
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
@@ -335,8 +339,15 @@ h3 {
     background-size: cover;
     padding-bottom: 2vh !important;
   }
+
+img {
+  margin-top: -7vh;
 }
 
+#style_for_all_chars {
+  margin-top: -60px;
+}
+}
 @media screen and
 (device-height: 896px),
 (device-height: 844px), (device-height: 851px),
@@ -475,5 +486,12 @@ width: 30vh;
 height: 8vh;
 background-size: cover;
 padding-bottom: 2vh !important;
+}
+img {
+  margin-top: -6vh;
+}
+
+#style_for_all_chars {
+  margin-top: -55px;
 }
 }
