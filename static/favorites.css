@@ -204,7 +204,7 @@ img {
 }
 
 #style_for_all_chars {
-  margin-top: -21vh;
+  margin-top: -23vh;
   margin-right: -5vh;
 }
 /* Адаптивные стили */
@@ -343,11 +343,11 @@ h3 {
   }
 
 img {
-  margin-top: -8vh;
+  margin-top: -9vh;
 }
 
 #style_for_all_chars {
-  margin-top: -65px;
+  margin-top: -70px;
 }
 }
 @media screen and
