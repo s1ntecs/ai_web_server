@@ -70,6 +70,9 @@ body {
   background-size: cover;
   box-shadow: 0px 8px 8px #00000029;
 }
+.lighter-text {
+  font-weight: lighter;
+}
 .buti {
   font-size: 2vh;
   font: normal normal bold 1.6vh/1.6vh;
