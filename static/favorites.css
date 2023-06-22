@@ -169,7 +169,7 @@ body {
   }
   h1 {
     font-size: 2vh;
-    margin-top: -10vh;
+    margin-top: -8vh;
     font-weight: lighter;
   }
   
@@ -199,17 +199,18 @@ h4 {
 }
 
 h5 {
+  margin-top: 18vh;
   font-size: 2vh;
   margin-top: 0vh;
   font-weight: lighter;
 }
 
 img {
-  margin-top: 0vh;
+  margin-top: -10vh;
 }
 
 #style_for_all_chars {
-  margin-top: 20vh;
+  margin-top: 18vh;
 }
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
