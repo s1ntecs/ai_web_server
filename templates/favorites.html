@@ -78,7 +78,10 @@
       {% for name, username, char_id, actions_count in personal_values %}
   <div class="col-md-6 text-center">
     <button id="button{{ loop.index }}" class="btn btn-primary rounded-pill btn-block mb-3 mx-auto d-block" onclick="redirectToPersChar('{{ char_id }}')">{{ name }}</button>
-    <h4>{{ actions_count }} сообщений</h4>
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <h4 style="display: inline-block; margin-right: 1vh;">{{ actions_count }}</h4>
+      <img src="static/img/chat1.svg" alt="Описание изображения" style="display: inline-block; width: 2vh; height: auto;">
+    </div>
   </div>
 {% endfor %}
     </div>
@@ -88,7 +91,10 @@
       {% for name, username, char_id, actions_count in values %}
       <div class="col-md-6 text-center">
         <button id="button{{ loop.index }}" class="buti btn-secondary btn-block mb-3 mx-auto d-block" onclick="redirectToAllChar('{{ char_id }}')">{{ name }}</button>
-        <h1> Создатель<br> {{ username }} <br> {{ actions_count }} сообщений</h1>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <h1 style="display: inline-block; margin-right: 1vh;">Создатель<br> {{ username }} <br> {{ actions_count }}</h1>
+          <img src="static/img/chat1.svg" alt="Описание изображения" style="display: inline-block; width: 2vh; height: auto;">
+        </div>
       </div>
       {% endfor %}
     </div>
