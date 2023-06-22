@@ -60,7 +60,7 @@ body {
   cursor: pointer;
 }
 .btn {
-  text-align: center;
+  /* text-align: center; */
   font-size: 2vh;
   font-weight: bold;
   width: 25vh;
@@ -69,6 +69,7 @@ body {
   letter-spacing: 0px;
   background-size: cover;
   box-shadow: 0px 8px 8px #00000029;
+  padding-bottom: 7vh;
 }
 .buti {
   font-size: 2vh;
@@ -212,6 +213,7 @@ h4 {
       /* color: #27A7E7; */
       margin-left: 20.3%;
       box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+      padding-bottom: 4vh !important;
     } 
     
     .buti {
@@ -395,7 +397,7 @@ font-weight: normal;
 }
 h4 {
   font-size: 2vh;
-  margin-top:-5vh;
+  margin-top:-6vh;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
