@@ -272,7 +272,7 @@ h3 {
   font-weight: normal;
   }
   h4 {
-    margin-top:-7vh;
+    margin-top:-7.5vh;
     font: normal normal bold 1.4vh/1.4vh;
     letter-spacing: 0px;
     /* color: #27A7E7; */
@@ -280,7 +280,7 @@ h3 {
     font-weight: lighter;
   }
   h5 {
-    margin-top: -3vh !important;
+    margin-top: 0vh !important;
     font-size: 2vh;
     margin-top: 0vh;
     font-weight: lighter;
@@ -291,7 +291,7 @@ h3 {
   }
   
   .style_for_all_chars {
-    margin-top: -3.5;
+    margin-top: 0vh;
   }
 .row {
   margin-top: 3vh;
