@@ -149,13 +149,13 @@ body {
     height: 10vh;
     background-size: cover;
     padding-bottom: 0vh !important;
-
   }
 
   #second-button {
     width: 32vh;
     height: 10vh;
     background-size: cover;
+    padding-bottom: 0vh !important;
   }
   #add-char-btn {
     font: normal normal bold 1.8vh/1.8vh;
@@ -195,7 +195,7 @@ body {
 }
 h4 {
   font-size: 2vh;
-  margin-top: -7vh;
+  margin-top: -10vh;
   font-weight: lighter;
 }
 
