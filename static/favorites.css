@@ -204,7 +204,8 @@ img {
 }
 
 #style_for_all_chars {
-  margin-top: -20vh;
+  margin-top: -21vh;
+  margin-right: -5vh;
 }
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
