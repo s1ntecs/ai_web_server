@@ -280,7 +280,7 @@ h3 {
     font-weight: lighter;
   }
   h5 {
-    margin-top: 14vh;
+    margin-top: -3vh !important;
     font-size: 2vh;
     margin-top: 0vh;
     font-weight: lighter;
@@ -290,8 +290,8 @@ h3 {
     margin-top: -10vh;
   }
   
-  #style_for_all_chars {
-    margin-top: 14vh;
+  .style_for_all_chars {
+    margin-top: -3.5;
   }
 .row {
   margin-top: 3vh;
@@ -361,13 +361,6 @@ h3 {
     padding-bottom: 2vh !important;
   }
 
-/* img {
-  margin-top: -10vh;
-}
-
-#style_for_all_chars {
-  margin-top: -70px;
-} */
 }
 @media screen and
 (device-height: 896px),
