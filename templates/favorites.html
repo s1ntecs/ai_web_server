@@ -91,8 +91,9 @@
       {% for name, username, char_id, actions_count in values %}
       <div class="col-md-6 text-center">
         <button id="button{{ loop.index }}" class="buti btn-secondary btn-block mb-3 mx-auto d-block" onclick="redirectToAllChar('{{ char_id }}')">{{ name }}</button>
+        <h1>Создатель<br> {{ username }}</h1>
         <div style="display: flex; align-items: center; justify-content: center;">
-          <h1 style="display: inline-block; margin-right: -3vh;">Создатель<br> {{ username }} <br> {{ actions_count }}</h1>
+          <h1 style="display: inline-block; margin-right: 1vh;">{{ actions_count }}</h1>
           <img src="static/img/chat1.svg" alt="Описание изображения" class="style_for_all_chars" style="display: inline-block; width: 2vh; height: auto;">
         </div>
       </div>
