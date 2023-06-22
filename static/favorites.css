@@ -213,7 +213,7 @@ h4 {
       /* color: #27A7E7; */
       margin-left: 20.3%;
       box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
-      padding-bottom: 4vh !important;
+      padding-bottom: 5vh !important;
     } 
     
     .buti {
@@ -258,7 +258,7 @@ h3 {
   font-weight: normal;
   }
   h4 {
-    margin-top:-5vh;
+    margin-top:-7vh;
     font: normal normal bold 1.4vh/1.4vh;
     letter-spacing: 0px;
     /* color: #27A7E7; */
