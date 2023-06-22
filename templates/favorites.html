@@ -75,7 +75,7 @@
       {% for name, username, char_id, actions_count in personal_values %}
   <div class="col-md-6 text-center">
     <button id="button{{ loop.index }}" class="btn btn-primary rounded-pill btn-block mb-3 mx-auto d-block" onclick="redirectToPersChar('{{ char_id }}')">{{ name }}</button>
-    <h3>{{ actions_count }} сообщений</h3>
+    <h4>{{ actions_count }} сообщений</h4>
   </div>
 {% endfor %}
     </div>

@@ -190,6 +190,12 @@ body {
     text-align: center;
     font-weight: normal;
 }
+h1 {
+  font-size: 2vh;
+  margin-top: -5vh;
+  font-weight: lighter;
+}
+
 
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
@@ -200,7 +206,7 @@ body {
     .btn {
       font-weight: bold;
       width: 25vh;
-      height: 12vh;
+      height: 8vh;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
@@ -244,11 +250,18 @@ h2 {
 }
 
 h3 {
-  margin-top: -3.5vh;
   font-size: 4vh;
   letter-spacing: 0px;
   opacity: 1;
   font-weight: normal;
+  }
+  h4 {
+    margin-top:-3.5vh;
+    font: normal normal bold 1.4vh/1.4vh;
+    letter-spacing: 0px;
+    /* color: #27A7E7; */
+    opacity: 1;
+    font-weight: lighter;
   }
 .row {
   margin-top: 3vh;
@@ -331,7 +344,7 @@ h3 {
 .btn {
   font-weight: bold;
   width: 22vh;
-  height: 12vh;
+  height: 9vh;
   letter-spacing: 0px;
   background-size: cover;
   /* color: #27A7E7; */
@@ -375,11 +388,19 @@ font-weight: lighter;
 }
 
 h3 {
-margin-top: -4;
 font-size: 4vh;
 letter-spacing: 0px;
 opacity: 1;
 font-weight: normal;
+}
+h4 {
+  font-size: 2vh;
+  margin-top:-4vh;
+  font: normal normal bold 1.4vh/1.4vh;
+  letter-spacing: 0px;
+  /* color: #27A7E7; */
+  opacity: 1;
+  font-weight: lighter;
 }
 .row {
 margin-top: 3vh;
