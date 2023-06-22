@@ -71,7 +71,8 @@ body {
   box-shadow: 0px 8px 8px #00000029;
 }
 .custom-button .lighter-text {
-  font-weight: lighter;
+  font-weight: normal;
+  font-style: italic;
 }
 .buti {
   font-size: 2vh;
