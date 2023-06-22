@@ -199,11 +199,11 @@ h4 {
 }
 
 img {
-  margin-top: -8vh;
+  margin-top: -9vh;
 }
 
 #style_for_all_chars {
-  margin-top: -15vh;
+  margin-top: -18vh;
 }
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
