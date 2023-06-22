@@ -210,7 +210,7 @@ img {
 }
 
 .style_for_all_chars {
-  margin-top: -1.5;
+  margin-top: -0.5;
 }
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
