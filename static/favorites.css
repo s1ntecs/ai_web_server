@@ -249,7 +249,7 @@ img {
     }
 
 h1 {
-  margin-top:-70px;
+  margin-top:-65px;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
@@ -291,7 +291,7 @@ h3 {
   }
   
   .style_for_all_chars {
-    margin-top: -0.5vh !important;
+    margin-top: -1vh !important;
   }
 .row {
   margin-top: 3vh;
