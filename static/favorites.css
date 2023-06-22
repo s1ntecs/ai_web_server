@@ -70,7 +70,6 @@ body {
   background-size: cover;
   box-shadow: 0px 8px 8px #00000029;
 }
-
 .buti {
   font-size: 2vh;
   font: normal normal bold 1.6vh/1.6vh;
@@ -167,7 +166,7 @@ body {
   }
   h1 {
     font-size: 2vh;
-    margin-top: -3.9vh;
+    margin-top: -9vh;
     font-weight: lighter;
   }
   
@@ -183,7 +182,7 @@ body {
   }
   h3 {
     font-size: 4vh;
-    margin-top: 6vh;
+    margin-top: -3.9vh;
     /* margin-bottom: 3vh; */
     letter-spacing: 0px;
     /* color: #27A7E7; */
@@ -201,7 +200,7 @@ body {
     .btn {
       font-weight: bold;
       width: 25vh;
-      height: 8vh;
+      height: 12vh;
       letter-spacing: 0px;
       background-size: cover;
       /* color: #27A7E7; */
@@ -228,7 +227,7 @@ body {
     }
 
 h1 {
-  margin-top: -5vh;;
+  margin-top:-60px;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
@@ -245,6 +244,7 @@ h2 {
 }
 
 h3 {
+  margin-top: -3.5vh;
   font-size: 4vh;
   letter-spacing: 0px;
   opacity: 1;
@@ -331,7 +331,7 @@ h3 {
 .btn {
   font-weight: bold;
   width: 22vh;
-  height: 9vh;
+  height: 12vh;
   letter-spacing: 0px;
   background-size: cover;
   /* color: #27A7E7; */
@@ -358,7 +358,7 @@ h3 {
 
 h1 {
   font-size: 2vh;
-  margin-top: -3vh;
+  margin-top:-55px;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
@@ -375,6 +375,7 @@ font-weight: lighter;
 }
 
 h3 {
+margin-top: -4;
 font-size: 4vh;
 letter-spacing: 0px;
 opacity: 1;
