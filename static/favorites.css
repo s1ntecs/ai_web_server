@@ -358,7 +358,7 @@ h3 {
 
 h1 {
   font-size: 2vh;
-  margin-top: 3vh;
+  margin-top: -3vh;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
