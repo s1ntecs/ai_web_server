@@ -376,8 +376,8 @@ h3 {
 
 .btn {
   font-weight: bold;
-  width: 22vh;
-  height: 12vh;
+  width: 20vh;
+  height: 10vh;
   letter-spacing: 0px;
   background-size: cover;
   /* color: #27A7E7; */
@@ -404,7 +404,7 @@ h3 {
 
 h1 {
   font-size: 2vh;
-  margin-top:-75px;
+  margin-top:-70px;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
