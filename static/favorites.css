@@ -198,7 +198,9 @@ h4 {
   font-weight: lighter;
 }
 
-
+img {
+  margin-top: -7vh;
+}
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
   .col-md-6{
