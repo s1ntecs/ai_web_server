@@ -189,6 +189,20 @@ body {
     text-align: center;
     font-weight: normal;
 }
+h5 {
+  margin-top: -3vh !important;
+  font-size: 2vh;
+  margin-top: 0vh;
+  font-weight: lighter;
+}
+
+img {
+  margin-top: -10vh;
+}
+
+.style_for_all_chars {
+  margin-top: -3.5;
+}
 
 /* Адаптивные стили */
 @media only screen and (max-device-height: 670px) {
@@ -247,6 +261,15 @@ h3 {
   letter-spacing: 0px;
   opacity: 1;
   font-weight: normal;
+  }
+  h5 {
+    margin-top: -1vh !important;
+    font-size: 2vh;
+    margin-top: 0vh;
+    font-weight: lighter;
+  }
+  .style_for_all_chars {
+    margin-top: -2vh !important;
   }
 .btn-container {
   left: 50%;
@@ -354,7 +377,7 @@ h3 {
 
 h1 {
   font-size: 2vh;
-  margin-top:-55px;
+  margin-top:-65px;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
@@ -373,6 +396,22 @@ h3 {
   font-size: 3.8vh;
   font-weight: normal;
 }
+
+h5 {
+  margin-top: -1vh !important;
+  font-size: 2vh;
+  margin-top: 0vh;
+  font-weight: lighter;
+}
+
+img {
+  margin-top: -10vh;
+}
+
+.style_for_all_chars {
+  margin-top: -2vh !important;
+}
+
 .btn-container {
   left: 50%;
   top: 92.5%;

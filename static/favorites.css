@@ -404,7 +404,7 @@ h3 {
 
 h1 {
   font-size: 2vh;
-  margin-top:-55px;
+  margin-top:-65px;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
@@ -427,13 +427,26 @@ opacity: 1;
 font-weight: normal;
 }
 h4 {
-  font-size: 2vh;
-  margin-top:-6vh;
+  margin-top:-8vh;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
   opacity: 1;
   font-weight: lighter;
+}
+h5 {
+  margin-top: -1vh !important;
+  font-size: 2vh;
+  margin-top: 0vh;
+  font-weight: lighter;
+}
+
+img {
+  margin-top: -10vh;
+}
+
+.style_for_all_chars {
+  margin-top: -2vh !important;
 }
 .row {
 margin-top: 3vh;
