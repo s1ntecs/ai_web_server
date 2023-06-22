@@ -390,7 +390,7 @@ h3 {
   font-weight: bold;
   border-radius: 3.7vh;
   width: 20vh;
-  height: 19vh;
+  height: 15vh;
   letter-spacing: 0px;
   background-size: cover;
   /* color: #27A7E7; */
@@ -404,7 +404,7 @@ h3 {
 
 h1 {
   font-size: 2vh;
-  margin-top:-65px;
+  margin-top:-75px;
   font: normal normal bold 1.4vh/1.4vh;
   letter-spacing: 0px;
   /* color: #27A7E7; */
