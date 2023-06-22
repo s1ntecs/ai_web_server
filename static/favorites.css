@@ -148,14 +148,14 @@ body {
     width: 25vh;
     height: 10vh;
     background-size: cover;
-    padding-bottom: 0 !important;
+    padding-bottom: 2vh !important;
   }
 
   #second-button {
     width: 32vh;
     height: 10vh;
     background-size: cover;
-    padding-bottom: 0 !important;
+    padding-bottom: 2vh !important;
   }
   #add-char-btn {
     font: normal normal bold 1.8vh/1.8vh;
@@ -322,7 +322,7 @@ h3 {
     width: 25vh;
     height: 10vh;
     background-size: cover;
-    padding-bottom: 0 !important;
+    padding-bottom: 2vh !important;
   }
 
   #second-button {
@@ -331,7 +331,7 @@ h3 {
     width: 32vh;
     height: 10vh;
     background-size: cover;
-    padding-bottom: 0 !important;
+    padding-bottom: 2vh !important;
   }
 }
 
@@ -463,7 +463,7 @@ font-size: 2vh;
 width: 20vh;
 height: 8vh;
 background-size: cover;
-padding-bottom: 0 !important;
+padding-bottom: 2vh !important;
 }
 
 #second-button {
@@ -472,6 +472,6 @@ border-radius: 8vw;
 width: 30vh;
 height: 8vh;
 background-size: cover;
-padding-bottom: 0 !important;
+padding-bottom: 2vh !important;
 }
 }
