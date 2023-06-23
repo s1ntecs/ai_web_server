@@ -26,7 +26,6 @@ async def refresh_counts():
     """
     result = await connection_db.fetch(select_query)
     for row in result:
-        print(row)
         char_id = row["character_id"]
         actions_count = row["count"]
 

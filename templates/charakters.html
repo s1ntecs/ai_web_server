@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Мой сайт с кнопками</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW5Z8F8TWV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-KW5Z8F8TWV');
+  </script>
+  <title>Characters AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/styles-copy.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
   <link href="https://fonts.googleapis.com/css2?family=San+Francisco&display=swap" rel="stylesheet">
+  <!-- <script>
+  let bG;
+  let userId;
+  let tg = window.Telegram.WebApp;
+  tg.expand();
+  userId = tg.initDataUnsafe.user.id;
+  bG = tg.colorScheme
+  function sendRequest() {
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('GET', 'https://ai-bot-sintecs.amvera.io/site_loaded?user_id=' + encodeURIComponent(userId) + '&site_tab=favourite&bg_color=' + encodeURIComponent(bG), true);
+        xhr.send();
+    }
+
+  function doSomethingWhenPageIsLoaded() {
+        sendRequest();
+    }
+</script> -->
   <style>
     body{
        color: var(--tg-theme-text-color);
@@ -48,10 +73,10 @@
     background-color: var(--tg-theme-bg-color) !important;
     color: var(--tg-theme-button-color) !important;
       }
-
  </style>
 </head>
-<body>
+<body onload="doSomethingWhenPageIsLoaded();">
+
   <div class="container">
     <div class="row">
       <!-- Создание 17 кнопок -->
@@ -77,9 +102,11 @@
   <button id="second-button" class="btn fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
 </div>
 <script>
+  let bG;
   let userId;
   let tg = window.Telegram.WebApp;
   tg.expand();
+  bG = tg.colorScheme
   userId = tg.initDataUnsafe.user.id;
   function redirectToAll_list() {
     var url = 'https://ai-bot-sintecs.amvera.io/';
@@ -96,8 +123,17 @@
       tg.close();
     }, 2000);
   }
+  function sendRequest() {
+        var xhr = new XMLHttpRequest();
 
+        // xhr.open('GET', 'http://localhost:8080/site_loaded?user_id=' + encodeURIComponent(userId) + '&site_tab=favourite&bg_color=' + encodeURIComponent(bG), true);
+        xhr.open('GET', 'https://ai-bot-sintecs.amvera.io/site_loaded?user_id=' + encodeURIComponent(userId) + '&site_tab=favourite&bg_color=' + encodeURIComponent(bG), true);
+        xhr.send();
+    }
 
+  function doSomethingWhenPageIsLoaded() {
+        sendRequest();
+    }
 </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
