@@ -52,7 +52,7 @@ async def insert_data_main_chars():
                                         char_id,
                                         char_name,
                                         welcome_msg)
-        except Exception:
+        except Exception:  # В случае если уже имеется такой персонаж
             pass
 
         c.execute(
