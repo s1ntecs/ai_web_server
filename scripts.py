@@ -4,7 +4,7 @@ import sqlite3
 from const import (welcome_msg_main_pers,
                    main_chars_name,
                    id_main_chars)
-
+from analysis.actions import amplitude_error
 
 async def get_connect():
     """ Создаем клавиатуру с функциями бота. """
@@ -41,7 +41,6 @@ async def insert_data_main_chars():
     connection_db = await get_connect()
     insert_query = """
     INSERT INTO characters (char_id, name, welcome_msg) VALUES ($1, $2, $3)
-    ON CONFLICT (char_id, name, welcome_msg) DO NOTHING
     """
     user_id = 7
     username = "Admin"
@@ -55,7 +54,12 @@ async def insert_data_main_chars():
                                         welcome_msg)
         except Exception:
             pass
-        c.execute("INSERT INTO characters (char_name, username, user_id, char_id) VALUES (?, ?, ?, ?)", (
-            char_name, username, user_id, char_id))
+
+        c.execute(
+            "INSERT OR IGNORE INTO characters (char_name, username, user_id, char_id) "
+            "VALUES (?, ?, ?, ?)",
+            (char_name, username, user_id, char_id)
+        )
+
         conn.commit()
     conn.close()
