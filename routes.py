@@ -22,7 +22,7 @@ async def index(request):
     conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
     # Получение данных из таблицы characters
-    c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = 7 ORDER BY actions_count DESC")
+    c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE char_id = <1000 ORDER BY actions_count DESC")
     try:
         all_chars = c.fetchall()
         char_names, usernames, char_ids, actions_count = zip(*all_chars)
@@ -150,12 +150,21 @@ async def site_loaded(request):
     user_id = urllib.parse.parse_qs(request.query_string).get('user_id', [None])[0]
     site_tab = urllib.parse.parse_qs(request.query_string).get('site_tab', [None])[0]
     bg_color = urllib.parse.parse_qs(request.query_string).get('bg_color', [None])[0]
-
+    text_color = urllib.parse.parse_qs(request.query_string).get('text_color', [None])[0]
+    hint_color = urllib.parse.parse_qs(request.query_string).get('hint_color', [None])[0]
+    link_color = urllib.parse.parse_qs(request.query_string).get('link_color', [None])[0]
+    button_color = urllib.parse.parse_qs(request.query_string).get('button_color', [None])[0]
+    backgound_color = urllib.parse.parse_qs(request.query_string).get('backgound_color', [None])[0]
     event_name = "Web site is loaded"
     await amplitude_site_loaded(user_id,
                                 event_name,
                                 site_tab,
-                                bg_color)
+                                bg_color,
+                                text_color,
+                                hint_color,
+                                link_color,
+                                button_color,
+                                backgound_color)
     return web.Response(text='to get requiest')
 
 

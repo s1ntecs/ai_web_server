@@ -46,10 +46,20 @@ async def amplitude_event_message(user_id, event_name: str):
 
 
 async def amplitude_site_loaded(user_id, event_name: str,
-                                site_tab: str, bg_color: str):
+                                site_tab: str, bg_color: str,
+                                text_color: str,
+                                hint_color: str,
+                                link_color: str,
+                                button_color: str,
+                                backgound_color: str):
     user_properties = {"user_id": user_id}
     event_properties = {"site_tab": site_tab,
-                        "theme": bg_color}
+                        "theme": bg_color,
+                        "text_color": text_color,
+                        "hint_color": hint_color,
+                        "link_color": link_color,
+                        "button_color": button_color,
+                        "backgound_color": backgound_color}
     await send_and_log(event_name, user_id,
                        event_properties=event_properties,
                        user_properties=user_properties)
