@@ -22,7 +22,7 @@ async def index(request):
     conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
     # Получение данных из таблицы characters
-    c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE char_id = <1000 ORDER BY actions_count DESC")
+    c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = 7 ORDER BY actions_count DESC")
     try:
         all_chars = c.fetchall()
         char_names, usernames, char_ids, actions_count = zip(*all_chars)
