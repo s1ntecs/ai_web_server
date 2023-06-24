@@ -21,8 +21,9 @@ async def index(request):
         await amplitude_event_message(user_id, event_name)
     conn = sqlite3.connect('sql3.db')
     c = conn.cursor()
+    c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = 7")
     # Получение данных из таблицы characters
-    c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = 7 ORDER BY actions_count DESC")
+    # c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = 7 ORDER BY actions_count DESC")
     try:
         all_chars = c.fetchall()
         char_names, usernames, char_ids, actions_count = zip(*all_chars)
