@@ -1,29 +1,10 @@
 from aiohttp import web
 import aiohttp_jinja2
 import jinja2
-import sqlite3
 from routes import index, add_character
 
 
 # Создание базы данных и подключение к ней
-conn = sqlite3.connect('sql3.db')
-c = conn.cursor()
-
-# Создание таблицы в базе данных
-c.execute('''CREATE TABLE IF NOT EXISTS characters
-             (id INTEGER PRIMARY KEY AUTOINCREMENT,
-             char_name TEXT,
-             username TEXT,
-             user_id INT,
-             char_id INT,
-             actions_count INT DEFAULT 0)''')
-
-c.execute('''CREATE TABLE IF NOT EXISTS request
-             (id INTEGER PRIMARY KEY AUTOINCREMENT,
-             headers TEXT,
-             query TEXT)''')
-# Закрытие соединения с базой данных
-conn.close()
 
 app = web.Application()
 aiohttp_jinja2.setup(app, loader=jinja2.FileSystemLoader('templates'))

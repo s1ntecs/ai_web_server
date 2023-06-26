@@ -1,5 +1,6 @@
 from aiohttp import web
 import urllib.parse
+import asyncpg
 from const import main_chars_activity, url_list
 import aiohttp_jinja2
 import jinja2
@@ -13,112 +14,164 @@ from analysis.actions import (amplitude_press_publick_bots_button,
                               amplitude_site_loaded)
 from scripts import refresh_counts, insert_data_main_chars
 
+import asyncpg
+import urllib.parse
+
+async def get_connect():
+    """ Создаем подключение к базе данных. """
+    connection = await asyncpg.connect(
+        host='127.0.0.1',
+        port=5432,
+        user='postgres',
+        database='postgres',
+        password='susel'
+    )
+    return connection
+
 
 async def index(request):
     user_id = urllib.parse.parse_qs(request.query_string).get('value', [None])[0]
     if user_id:
         event_name = "User press favorite_bots button"
         await amplitude_event_message(user_id, event_name)
-    conn = sqlite3.connect('sql3.db')
-    c = conn.cursor()
-    c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = 7")
-    # Получение данных из таблицы characters
-    # c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = 7 ORDER BY actions_count DESC")
+
+    connection = await get_connect()
+
     try:
-        all_chars = c.fetchall()
+        # Получение данных из таблицы characters
+        char_query = """
+            SELECT char_name, username, char_id, actions_count
+            FROM characters
+            WHERE user_id = $1
+        """
+        all_chars = await connection.fetch(char_query, 7)
         char_names, usernames, char_ids, actions_count = zip(*all_chars)
-    except ValueError:
+
+    except Exception as e:
         if user_id:
             event_name = "Favorite Bots not found"
             await amplitude_error(user_id, event_name)
         char_names = usernames = char_ids = actions_count = []
+        print(f"Error occurred: {e}")
+
     if user_id:
         event_name = "Favorite Bots tab data without self bots was been send to user"
         await amplitude_event_message(user_id, event_name)
-    return aiohttp_jinja2.render_template('charakters.html', request=request,
-                                          context={'values': zip(
-                                           char_names,
-                                           usernames,
-                                           char_ids,
-                                           actions_count,
-                                           main_chars_activity,
-                                           url_list)})
+
+    await connection.close()
+
+    return aiohttp_jinja2.render_template(
+        'charakters.html',
+        request=request,
+        context={'values': zip(
+            char_names,
+            usernames,
+            char_ids,
+            actions_count,
+            main_chars_activity,
+            url_list
+        )}
+    )
 
 
 async def favorites(request):
     user_id = urllib.parse.parse_qs(request.query_string).get('value', [None])[0]
+
     # Создание базы данных и подключение к ней
-    conn = sqlite3.connect('sql3.db')
-    c = conn.cursor()
-    # Получение данных из таблицы characters
-    c.execute("SELECT char_name, username, char_id, actions_count FROM characters ORDER BY actions_count DESC")
+    connection = await get_connect()
 
     try:
-        all_chars = c.fetchall()
+        # Получение данных из таблицы characters
+        char_query = """
+            SELECT char_name, username, char_id, actions_count
+            FROM characters
+            ORDER BY actions_count DESC
+        """
+        all_chars = await connection.fetch(char_query)
         char_names, usernames, char_ids, actions_count = zip(*all_chars)
-    except ValueError:
+    except Exception as e:
         event_name = "Community bots not found"
         await amplitude_error(user_id, event_name)
         char_names = usernames = char_ids = actions_count = []
+        print(f"Error occurred: {e}")
 
     if user_id == "undefined":
         pers_char_names = pers_usernames = pers_char_ids = pers_actions_count = []
-
     else:
         int_usr = int(user_id)
         await amplitude_press_publick_bots_button(user_id)
-        c.execute("SELECT char_name, username, char_id, actions_count FROM characters WHERE user_id = ?", (int_usr,))
-        pers_chars = c.fetchall()
+        pers_char_query = """
+            SELECT char_name, username, char_id, actions_count
+            FROM characters
+            WHERE user_id = $1
+        """
+        pers_chars = await connection.fetch(pers_char_query, int_usr)
+
         if not pers_chars:
-            event_name = "Bots of comunity tab User was not have created bots"
+            event_name = "Bots of community tab User did not have created bots"
             await amplitude_event_message(user_id, event_name)
             pers_char_names = pers_usernames = pers_char_ids = pers_actions_count = []
-            event_name = "Bots of comunity tab data without self bots was been send to user"
+            event_name = "Bots of community tab data without self bots was been sent to user"
             await amplitude_event_message(user_id, event_name)
 
-            return aiohttp_jinja2.render_template('empty_favorites.html', request=request,
-                                                  context={'values': zip(char_names,
-                                                                         usernames,
-                                                                         char_ids,
-                                                                         actions_count),
-                                                           'personal_values': zip(pers_char_names,
-                                                                                  pers_usernames,
-                                                                                  pers_char_ids,
-                                                                                  pers_actions_count)})
-
+            return aiohttp_jinja2.render_template(
+                'empty_favorites.html',
+                request=request,
+                context={
+                    'values': zip(char_names, usernames, char_ids, actions_count),
+                    'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids, pers_actions_count)
+                }
+            )
         else:
             pers_char_names, pers_usernames, pers_char_ids, pers_actions_count = zip(*pers_chars)
+
     # Закрытие соединения с базой данных
-    conn.close()
-    event_name = "Bots of comunity tab User had created bots"
+    await connection.close()
+
+    event_name = "Bots of community tab User had created bots"
     await amplitude_event_message(user_id, event_name)
     pers_char_names = pers_usernames = pers_char_ids = pers_actions_count = []
-    event_name = "Bots of comunity tab Data with self bots was been send to user"
+    event_name = "Bots of community tab Data with self bots was been sent to user"
     await amplitude_event_message(user_id, event_name)
-    return aiohttp_jinja2.render_template('favorites.html', request=request,
-                                          context={'values': zip(char_names,
-                                                                    usernames,
-                                                                    char_ids,
-                                                                    actions_count),
-                                                   'personal_values': zip(pers_char_names,
-                                                                            pers_usernames,
-                                                                            pers_char_ids,
-                                                                            pers_actions_count)})
+
+    return aiohttp_jinja2.render_template(
+        'favorites.html',
+        request=request,
+        context={
+            'values': zip(char_names, usernames, char_ids, actions_count),
+            'personal_values': zip(pers_char_names, pers_usernames, pers_char_ids, pers_actions_count)
+        }
+    )
 
 
 async def all_bots(request):
-    conn = sqlite3.connect('sql3.db')
-    c = conn.cursor()
-    c.execute("SELECT char_name, username, char_id FROM characters")
-    all_chars = c.fetchall()
-    if not all_chars:
+    # Создаем подключение к базе данных
+    connection = await get_connect()
+
+    try:
+        # Получение данных из таблицы characters
+        char_query = """
+            SELECT char_name, username, char_id
+            FROM characters
+        """
+        all_chars = await connection.fetch(char_query)
+        
+        if not all_chars:
+            char_names = usernames = char_ids = []
+        else:
+            char_names, usernames, char_ids = zip(*all_chars)
+    except Exception as e:
+        print(f"Error occurred: {e}")
         char_names = usernames = char_ids = []
-    char_names, usernames, char_ids = zip(*all_chars)
+
     # Закрытие соединения с базой данных
-    conn.close()
-    return aiohttp_jinja2.render_template('bots_list.html', request=request,
-                                          context={'values': zip(
-                                           char_names, usernames, char_ids)})
+    await connection.close()
+
+    return aiohttp_jinja2.render_template(
+        'bots_list.html',
+        request=request,
+        context={'values': zip(char_names, usernames, char_ids)}
+    )
 
 
 async def add_character(request):
@@ -129,16 +182,19 @@ async def add_character(request):
         char_id = data.get('char_id')
         user_id = data.get('user_id')
         await amplitude_get_char_data(user_id, char_id)
-        # Создание базы данных и подключение к ней
-        conn = sqlite3.connect('sql3.db')
-        c = conn.cursor()
+
+        # Создаем подключение к базе данных
+        connection = await get_connect()
 
         # Вставка новой записи в таблицу
-        c.execute("INSERT INTO characters (char_name, username, user_id, char_id) VALUES (?, ?, ?, ?)", (name, username, user_id, char_id))
-        conn.commit()
+        insert_query = """
+            INSERT INTO characters (char_name, username, user_id, char_id)
+            VALUES ($1, $2, $3, $4)
+        """
+        await connection.execute(insert_query, name, username, user_id, char_id)
 
         # Закрытие соединения с базой данных
-        conn.close()
+        await connection.close()
         await refresh_counts()
         await amplitude_char_data_insert(user_id, char_id)
         return web.Response(text='Character added successfully')
