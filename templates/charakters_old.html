@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мой сайт с кнопками</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/styles-copy.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
+  <link href="https://fonts.googleapis.com/css2?family=San+Francisco&display=swap" rel="stylesheet">
+  <style>
+    body{
+       color: var(--tg-theme-text-color);
+       background: var(--tg-theme-bg-color);
+    }
+
+    .hint{
+       color: var(--tg-theme-hint-color);
+    }
+
+    .link{
+       color: var(--tg-theme-link-color);
+    }
+
+    h1 {
+      color: var(--tg-theme-text-color);
+    }
+    h2 {
+        color: var(--tg-theme-text-color);
+    }
+    .btn{
+      border: 2px solid var(--tg-theme-button-color);
+       background: var(--tg-theme-button-color);
+       color: var(--tg-theme-button-text-color);
+    }
+    .fixed-button{
+      border: 1px solid var(--tg-theme-button-color);
+       background: var(--tg-theme-button-color);
+       color: var(--tg-theme-button-text-color);
+    }
+    .btn-primary:hover {
+      background-color: var(--tg-theme-hover-color);
+    }
+  .btn.active.bg-primary {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 3px solid var(--tg-theme-button-color) !important;
+    background-color: var(--tg-theme-bg-color) !important;
+    color: var(--tg-theme-button-color) !important;
+      }
+
+ </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- Создание 17 кнопок -->
+      <div class="col-md-6 ">
+        <button id="button1" class="btn btn-primary btn-block mb-3 mx-auto d-block"></button>
+      </div>
+      <div class="col-md-6">
+        <button id="button2" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Альберт Эйнштейн</h1>
+        <h2>Физик-теоретик</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Эминем</h1>
+        <h2>Музыкант</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button3" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button4" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Гарри Поттер</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Супер Марио</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button5" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button6" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Мистер Бин</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Психолог</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button7" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button8" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Снуп-Дог</h1>
+        <h2>Музыкант</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Стив Джобс</h1>
+        <h2>Предприниматель</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button9" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button10" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Илон Маск</h1>
+        <h2>Предприниматель</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Гигачад</h1>
+        <h2>интернет-мем</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button11" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button12" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Кенни Маккорми</h1>
+        <h2>Персонаж</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Майкл Джексон</h1>
+        <h2>Музыкант</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button13" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+        <button id="button14" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Задрот</h1>
+        <h2>Всезнающий</h2>
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Иосиф Сталин</h1>
+        <h2>Государственный деятель</h2>
+      </div>
+      <div class="col-md-6">
+        <button id="button15" class="btn btn-primary btn-block mb-3 mx-auto d-block">&nbsp;</button>
+      </div>
+      <div class="col-md-6">
+      </div>
+      <div class="col-md-6 text-center">
+        <h1>Тони Старк</h1>
+        <h2>Персонаж</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="btn-container">
+  <button id="first-button" class="btn fixed-button mx-auto d-block bg-primary active" onclick="redirectToAll_list()">Избранные</button>
+  <button id="second-button" class="btn fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
+</div>
+<script>
+  let userId;
+  let tg = window.Telegram.WebApp;
+  tg.expand();
+  userId = tg.initDataUnsafe.user.id;
+  function redirectToAll_list() {
+    var url = 'https://ai-bot-sintecs.amvera.io/';
+    window.location.href = url;
+  }
+  function redirectToFavorites() {
+    var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
+    window.location.href = url;
+  }
+  for (let i = 1; i <= 15; i++) {
+    var button = document.getElementById("button" + i);
+    button.addEventListener("click", function() {
+      var url = "http://65.108.53.155:8081/set_char?user_id=" + encodeURIComponent(userId) + "&char_id=" + i;
+      window.location.href = url;
+      setTimeout(function() {
+      tg.close();
+    }, 2000);
+    });
+  }
+
+
+</script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

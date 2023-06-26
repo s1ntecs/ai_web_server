@@ -102,40 +102,18 @@
   <button id="second-button" class="btn fixed-button mx-auto d-block" onclick="redirectToFavorites()">Боты сообщества</button>
 </div>
 <script>
-
   let bG;
   let userId;
-  let bg_color;
-  let text_color;
-  let hint_color;
-  let link_color;
-  let button_color;
   let tg = window.Telegram.WebApp;
   tg.expand();
   bG = tg.colorScheme
-  bg_color = tg.ThemeParams.bg_color;
-  text_color = tg.ThemeParams.text_color;
-  hint_color = tg.ThemeParams.hint_color;
   userId = tg.initDataUnsafe.user.id;
-  link_color = tg.ThemeParams.link_color;
-  button_color = tg.ThemeParams.button_color;
-  function sendRequest() {
-    var xhr = new XMLHttpRequest();
-  // xhr.open('GET', 'https://ai-bot-sintecs.amvera.io/site_loaded?user_id=' + encodeURIComponent(userId) + '&site_tab=favourite&bg_color=' + encodeURIComponent(bG), true);
-    var url = 'https://ai-bot-sintecs.amvera.io/site_loaded?user_id=' + encodeURIComponent(userId) +
-      '&site_tab=favourite' +
-      '&bg_color=' + encodeURIComponent(bG) +
-      '&text_color=' + encodeURIComponent(text_color) +
-      '&hint_color=' + encodeURIComponent(hint_color) +
-      '&link_color=' + encodeURIComponent(link_color) +
-      '&button_color=' + encodeURIComponent(button_color);
-  }
   function redirectToAll_list() {
-    var url = 'https://ai-bot-sintecs.amvera.io/';
+    var url = 'https://mindfusion.dev/';
     window.location.href = url;
   }
   function redirectToFavorites() {
-    var url = 'https://ai-bot-sintecs.amvera.io/favorites?value=' + encodeURIComponent(userId);
+    var url = 'https://mindfusion.dev/favorites?value=' + encodeURIComponent(userId);
     window.location.href = url;
   }
   function redirectToAllChar(charId) {
@@ -143,8 +121,16 @@
     window.location.href = url;
     setTimeout(function() {
       tg.close();
-    }, 2000);
+    }, 500);
   }
+  function sendRequest() {
+        var xhr = new XMLHttpRequest();
+
+        // xhr.open('GET', 'http://localhost:8080/site_loaded?user_id=' + encodeURIComponent(userId) + '&site_tab=favourite&bg_color=' + encodeURIComponent(bG), true);
+        xhr.open('GET', 'https://mindfusion.dev/site_loaded?user_id=' + encodeURIComponent(userId) + '&site_tab=favourite&bg_color=' + encodeURIComponent(bG), true);
+        xhr.send();
+    }
+
   function doSomethingWhenPageIsLoaded() {
         sendRequest();
     }
@@ -152,4 +138,3 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
